@@ -1,0 +1,26 @@
+{
+  "display_key": "careerchronicle.skill.frost_bolt",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 14,
+  "cooldown_ticks": 60,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:ice",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "projectile",
+      "entity": "careerchronicle:career_fireball",
+      "speed": 1.5,
+      "damage": 5.0,
+      "per_level_damage": 0.5,
+      "burn_seconds": 0
+    }
+  ]
+}

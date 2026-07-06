@@ -1,0 +1,27 @@
+{
+  "display_key": "careerchronicle.class.ice_mage",
+  "segment_levels": 10,
+  "grants_skills": [
+    "careerchronicle:frost_bolt",
+    "careerchronicle:frozen_ground",
+    "careerchronicle:blizzard"
+  ],
+  "tags": [
+    "careerchronicle:ice",
+    "careerchronicle:magic"
+  ],
+  "repeat_rewards": [
+    {
+      "required_count": 2,
+      "unlock_skill": "careerchronicle:glacial_prison"
+    },
+    {
+      "required_count": 3,
+      "unlock_skill": "careerchronicle:absolute_zero"
+    }
+  ],
+  "required_attributes": {
+    "int": 12,
+    "wis": 8
+  }
+}

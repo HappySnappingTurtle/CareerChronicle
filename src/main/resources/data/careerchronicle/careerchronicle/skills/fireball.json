@@ -1,0 +1,26 @@
+{
+  "display_key": "careerchronicle.skill.fireball",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 18,
+  "cooldown_ticks": 80,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:fire",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "projectile",
+      "entity": "careerchronicle:career_fireball",
+      "speed": 1.55,
+      "damage": 6.0,
+      "per_level_damage": 1.0,
+      "burn_seconds": 4
+    }
+  ]
+}

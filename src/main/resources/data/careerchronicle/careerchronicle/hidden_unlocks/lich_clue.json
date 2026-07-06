@@ -1,0 +1,13 @@
+{
+  "display_key": "careerchronicle.hidden.lich",
+  "clue_key": "careerchronicle.hidden.lich.clue",
+  "revealed_key": "careerchronicle.hidden.lich.revealed",
+  "required_class_counts": {
+    "careerchronicle:necromancer": 2,
+    "careerchronicle:ice_mage": 1
+  },
+  "required_tag_scores": {
+    "careerchronicle:dark": 2
+  },
+  "unlock_flag": "careerchronicle:lich_clue"
+}

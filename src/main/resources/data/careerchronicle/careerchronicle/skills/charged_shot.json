@@ -1,0 +1,25 @@
+{
+  "display_key": "careerchronicle.skill.charged_shot",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 12,
+  "cooldown_ticks": 40,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:ranged_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:bow",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "arrow",
+      "count": 1,
+      "speed": 3.35,
+      "damage_bonus": 4.0,
+      "per_level_damage": 0.5
+    }
+  ]
+}

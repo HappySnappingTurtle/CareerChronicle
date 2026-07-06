@@ -1,0 +1,14 @@
+{
+  "display_key": "careerchronicle.hidden.death_knight",
+  "clue_key": "careerchronicle.hidden.death_knight.clue",
+  "revealed_key": "careerchronicle.hidden.death_knight.revealed",
+  "required_class_counts": {
+    "careerchronicle:warrior": 1,
+    "careerchronicle:necromancer": 1
+  },
+  "required_tag_scores": {
+    "careerchronicle:melee": 1,
+    "careerchronicle:dark": 1
+  },
+  "unlock_flag": "careerchronicle:death_knight_clue"
+}

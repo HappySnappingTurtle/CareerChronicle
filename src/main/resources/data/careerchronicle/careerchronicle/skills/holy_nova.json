@@ -1,0 +1,41 @@
+{
+  "display_key": "careerchronicle.skill.holy_nova",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 28,
+  "cooldown_ticks": 180,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:holy_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:holy",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 3.4,
+      "filter": "ally"
+    },
+    {
+      "op": "heal",
+      "amount": 3.0,
+      "per_level": 0.5,
+      "target": "ally_area",
+      "radius": 3.4
+    },
+    {
+      "op": "aoe",
+      "radius": 3.4,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 4.0,
+      "per_level": 0.5,
+      "damage_type": "magic"
+    }
+  ]
+}

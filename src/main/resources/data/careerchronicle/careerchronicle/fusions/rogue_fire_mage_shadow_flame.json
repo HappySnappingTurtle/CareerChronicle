@@ -1,0 +1,7 @@
+{
+  "required_class_counts": {
+    "careerchronicle:rogue": 1,
+    "careerchronicle:fire_mage": 1
+  },
+  "unlock_skill": "careerchronicle:shadow_flame"
+}

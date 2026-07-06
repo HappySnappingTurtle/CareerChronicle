@@ -1,0 +1,29 @@
+{
+  "display_key": "careerchronicle.skill.blade_flurry",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 20,
+  "cooldown_ticks": 100,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:stealth",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 2.5,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 4.0,
+      "per_level": 0.5,
+      "damage_type": "player_attack"
+    }
+  ]
+}

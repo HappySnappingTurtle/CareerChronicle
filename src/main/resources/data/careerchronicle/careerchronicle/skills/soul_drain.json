@@ -1,0 +1,13 @@
+{
+  "display_key": "careerchronicle.skill.soul_drain",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 16,
+  "executor": "careerchronicle:soul_drain",
+  "cooldown_ticks": 80,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  }
+}

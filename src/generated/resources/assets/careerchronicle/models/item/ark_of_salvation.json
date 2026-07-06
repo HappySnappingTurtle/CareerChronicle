@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "careerchronicle:item/ark_of_salvation"
+  }
+}

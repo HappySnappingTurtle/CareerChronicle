@@ -1,0 +1,41 @@
+{
+  "display_key": "careerchronicle.skill.iron_vanguard",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 18,
+  "cooldown_ticks": 180,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:melee",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 180,
+      "per_level_duration": 20,
+      "amplifier": 1,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:absorption",
+      "duration": 200,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 80,
+      "amplifier": 0,
+      "target": "self"
+    }
+  ]
+}

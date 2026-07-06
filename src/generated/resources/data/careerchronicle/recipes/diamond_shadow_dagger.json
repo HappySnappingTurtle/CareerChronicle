@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "careerchronicle:iron_shadow_dagger"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "careerchronicle:dark_essence"
+    }
+  ],
+  "result": {
+    "item": "careerchronicle:diamond_shadow_dagger"
+  }
+}

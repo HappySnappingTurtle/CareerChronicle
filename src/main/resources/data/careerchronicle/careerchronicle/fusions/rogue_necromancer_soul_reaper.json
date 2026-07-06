@@ -1,0 +1,7 @@
+{
+  "required_class_counts": {
+    "careerchronicle:rogue": 1,
+    "careerchronicle:necromancer": 1
+  },
+  "unlock_skill": "careerchronicle:soul_reaper"
+}

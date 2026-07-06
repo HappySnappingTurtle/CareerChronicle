@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "careerchronicle:runic_blade",
+    "careerchronicle:shadow_dagger",
+    "careerchronicle:guardian_shield",
+    "careerchronicle:iron_runic_blade",
+    "careerchronicle:diamond_runic_blade",
+    "careerchronicle:iron_shadow_dagger",
+    "careerchronicle:diamond_shadow_dagger",
+    "careerchronicle:diamond_guardian_mace",
+    "careerchronicle:berserker_cleaver",
+    "careerchronicle:viper_fang",
+    "careerchronicle:titans_maul",
+    "careerchronicle:executioners_edge",
+    "minecraft:iron_sword",
+    "minecraft:diamond_sword",
+    "minecraft:netherite_sword",
+    "minecraft:iron_axe",
+    "minecraft:diamond_axe",
+    "minecraft:netherite_axe"
+  ]
+}

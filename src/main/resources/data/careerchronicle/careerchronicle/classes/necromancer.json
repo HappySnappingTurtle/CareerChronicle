@@ -1,0 +1,27 @@
+{
+  "display_key": "careerchronicle.class.necromancer",
+  "segment_levels": 10,
+  "grants_skills": [
+    "careerchronicle:soul_drain",
+    "careerchronicle:bone_spike",
+    "careerchronicle:undead_shield"
+  ],
+  "tags": [
+    "careerchronicle:dark",
+    "careerchronicle:magic"
+  ],
+  "repeat_rewards": [
+    {
+      "required_count": 2,
+      "unlock_skill": "careerchronicle:death_coil"
+    },
+    {
+      "required_count": 3,
+      "unlock_skill": "careerchronicle:lich_form"
+    }
+  ],
+  "required_attributes": {
+    "int": 12,
+    "con": 8
+  }
+}

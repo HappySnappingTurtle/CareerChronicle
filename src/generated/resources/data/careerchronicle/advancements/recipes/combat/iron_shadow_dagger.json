@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dark_essence": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "careerchronicle:dark_essence"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "careerchronicle:iron_shadow_dagger"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_essence",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "careerchronicle:iron_shadow_dagger"
+    ]
+  },
+  "sends_telemetry_event": false
+}

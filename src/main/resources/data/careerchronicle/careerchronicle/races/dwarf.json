@@ -1,0 +1,22 @@
+{
+  "display_key": "careerchronicle.race.dwarf",
+  "allowed_classes": [
+    "careerchronicle:fire_mage",
+    "careerchronicle:archer",
+    "careerchronicle:warrior",
+    "careerchronicle:priest",
+    "careerchronicle:guardian",
+    "careerchronicle:ice_mage"
+  ],
+  "traits": [
+    "careerchronicle:stout_guard"
+  ],
+  "biome_tags": [
+    "mountain",
+    "stony",
+    "windswept",
+    "peaks",
+    "cave",
+    "dripstone"
+  ]
+}

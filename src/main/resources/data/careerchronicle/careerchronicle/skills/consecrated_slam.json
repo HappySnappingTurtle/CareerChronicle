@@ -1,0 +1,56 @@
+{
+  "display_key": "careerchronicle.skill.consecrated_slam",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 26,
+  "cooldown_ticks": 160,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:holy",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 80,
+      "per_level_duration": 10,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "heal",
+      "amount": 3.0,
+      "per_level": 0.5,
+      "target": "ally_area",
+      "radius": 3.2
+    },
+    {
+      "op": "aoe",
+      "radius": 3.2,
+      "height": 0.9,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 5.0,
+      "per_level": 0.5,
+      "damage_type": "magic"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 70,
+      "amplifier": 1
+    },
+    {
+      "op": "knockback",
+      "strength": 0.32,
+      "direction": "away"
+    }
+  ]
+}

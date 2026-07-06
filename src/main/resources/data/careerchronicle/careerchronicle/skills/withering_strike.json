@@ -1,0 +1,48 @@
+{
+  "display_key": "careerchronicle.skill.withering_strike",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 18,
+  "cooldown_ticks": 80,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:dark",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "dash",
+      "distance": 0.7,
+      "direction": "look",
+      "vertical": 0.06
+    },
+    {
+      "op": "aoe",
+      "radius": 2.0,
+      "height": 0.75,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 7.0,
+      "per_level": 1.0,
+      "damage_type": "player_attack"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:wither",
+      "duration": 100,
+      "amplifier": 1
+    },
+    {
+      "op": "heal",
+      "amount": 3.0,
+      "per_level": 0.5,
+      "target": "self"
+    }
+  ]
+}

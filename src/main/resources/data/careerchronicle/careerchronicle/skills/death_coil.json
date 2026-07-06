@@ -1,0 +1,13 @@
+{
+  "display_key": "careerchronicle.skill.death_coil",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 24,
+  "executor": "careerchronicle:death_coil",
+  "cooldown_ticks": 180,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  }
+}

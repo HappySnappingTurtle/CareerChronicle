@@ -1,0 +1,42 @@
+{
+  "display_key": "careerchronicle.skill.runic_ward",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 22,
+  "cooldown_ticks": 160,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:dark",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:absorption",
+      "duration": 200,
+      "per_level_duration": 20,
+      "amplifier": 2,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 160,
+      "per_level_duration": 20,
+      "amplifier": 1,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 200,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    }
+  ]
+}

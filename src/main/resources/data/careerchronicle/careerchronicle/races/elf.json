@@ -1,0 +1,23 @@
+{
+  "display_key": "careerchronicle.race.elf",
+  "allowed_classes": [
+    "careerchronicle:fire_mage",
+    "careerchronicle:archer",
+    "careerchronicle:warrior",
+    "careerchronicle:priest",
+    "careerchronicle:guardian",
+    "careerchronicle:rogue",
+    "careerchronicle:ice_mage"
+  ],
+  "traits": [
+    "careerchronicle:keen_senses"
+  ],
+  "biome_tags": [
+    "forest",
+    "birch",
+    "jungle",
+    "flower",
+    "grove",
+    "cherry"
+  ]
+}

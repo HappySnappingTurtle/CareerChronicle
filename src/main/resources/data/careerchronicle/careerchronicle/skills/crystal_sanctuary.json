@@ -1,0 +1,38 @@
+{
+  "display_key": "careerchronicle.skill.crystal_sanctuary",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 24,
+  "cooldown_ticks": 160,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:ice",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 160,
+      "per_level_duration": 20,
+      "amplifier": 1,
+      "target": "self"
+    },
+    {
+      "op": "aoe",
+      "radius": 5.0,
+      "filter": "ally"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 100,
+      "per_level_duration": 10,
+      "amplifier": 0
+    }
+  ]
+}

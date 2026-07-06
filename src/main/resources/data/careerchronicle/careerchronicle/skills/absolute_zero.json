@@ -1,0 +1,43 @@
+{
+  "display_key": "careerchronicle.skill.absolute_zero",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 35,
+  "cooldown_ticks": 240,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:ice",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 7.0,
+      "height": 2.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 8.0,
+      "per_level": 1.0,
+      "damage_type": "magic"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 200,
+      "per_level_duration": 20,
+      "amplifier": 4
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:weakness",
+      "duration": 140,
+      "amplifier": 1
+    }
+  ]
+}

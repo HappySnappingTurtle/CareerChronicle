@@ -1,0 +1,41 @@
+{
+  "display_key": "careerchronicle.skill.surprise_assault",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 20,
+  "cooldown_ticks": 100,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:melee",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "dash",
+      "distance": 1.0,
+      "direction": "look",
+      "vertical": 0.15
+    },
+    {
+      "op": "aoe",
+      "radius": 3.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 8.0,
+      "per_level": 1.0,
+      "damage_type": "player_attack"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 60,
+      "amplifier": 1
+    }
+  ]
+}

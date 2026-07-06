@@ -1,0 +1,26 @@
+{
+  "display_key": "careerchronicle.skill.guiding_light_arrow",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 20,
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:ranged_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:holy",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "arrow",
+      "count": 1,
+      "speed": 2.95,
+      "damage_bonus": 2.0,
+      "per_level_damage": 0.5,
+      "glow": true
+    }
+  ]
+}

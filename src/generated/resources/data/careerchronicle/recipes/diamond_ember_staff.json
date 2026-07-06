@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "careerchronicle:iron_ember_staff"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "careerchronicle:frost_crystal"
+    }
+  ],
+  "result": {
+    "item": "careerchronicle:diamond_ember_staff"
+  }
+}

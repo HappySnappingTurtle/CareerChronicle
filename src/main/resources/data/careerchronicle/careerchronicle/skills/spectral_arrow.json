@@ -1,0 +1,25 @@
+{
+  "display_key": "careerchronicle.skill.spectral_arrow",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 18,
+  "cooldown_ticks": 80,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:ranged_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:dark",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "arrow",
+      "count": 1,
+      "speed": 3.5,
+      "damage_bonus": 2.0,
+      "per_level_damage": 0.5
+    }
+  ]
+}

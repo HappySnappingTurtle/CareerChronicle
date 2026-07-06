@@ -1,0 +1,7 @@
+{
+  "required_class_counts": {
+    "careerchronicle:ice_mage": 1,
+    "careerchronicle:guardian": 1
+  },
+  "unlock_skill": "careerchronicle:permafrost_wall"
+}

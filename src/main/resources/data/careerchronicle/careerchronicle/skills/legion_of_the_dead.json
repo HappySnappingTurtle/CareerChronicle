@@ -1,0 +1,47 @@
+{
+  "display_key": "careerchronicle.skill.legion_of_the_dead",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 26,
+  "cooldown_ticks": 180,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:dark",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 6.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 5.0,
+      "per_level": 0.5,
+      "damage_type": "magic"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:weakness",
+      "duration": 140,
+      "amplifier": 1
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 100,
+      "amplifier": 0
+    },
+    {
+      "op": "heal",
+      "amount": 6.0,
+      "per_level": 1.0,
+      "target": "self"
+    }
+  ]
+}

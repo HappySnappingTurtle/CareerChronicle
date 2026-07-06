@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_snare_launcher": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "careerchronicle:snare_launcher"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "careerchronicle:iron_snare_launcher"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_snare_launcher",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "careerchronicle:iron_snare_launcher"
+    ]
+  },
+  "sends_telemetry_event": false
+}

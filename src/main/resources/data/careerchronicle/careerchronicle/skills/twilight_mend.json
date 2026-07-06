@@ -1,0 +1,31 @@
+{
+  "display_key": "careerchronicle.skill.twilight_mend",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 20,
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:holy_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:dark",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "heal",
+      "amount": 6.0,
+      "per_level": 1.0,
+      "target": "ally_area",
+      "radius": 5.0
+    },
+    {
+      "op": "heal",
+      "amount": 6.0,
+      "per_level": 1.0,
+      "target": "self"
+    }
+  ]
+}

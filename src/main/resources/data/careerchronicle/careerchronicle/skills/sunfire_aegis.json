@@ -1,0 +1,57 @@
+{
+  "display_key": "careerchronicle.skill.sunfire_aegis",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 26,
+  "cooldown_ticks": 160,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:holy_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:holy",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 140,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 180,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:regeneration",
+      "duration": 80,
+      "per_level_duration": 10,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "aoe",
+      "radius": 2.6,
+      "filter": "hostile"
+    },
+    {
+      "op": "ignite",
+      "seconds": 3
+    },
+    {
+      "op": "damage",
+      "amount": 3.0,
+      "per_level": 0.5,
+      "damage_type": "magic"
+    }
+  ]
+}

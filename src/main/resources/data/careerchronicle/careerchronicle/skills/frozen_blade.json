@@ -1,0 +1,41 @@
+{
+  "display_key": "careerchronicle.skill.frozen_blade",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 20,
+  "cooldown_ticks": 100,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:ice",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "dash",
+      "distance": 0.6,
+      "direction": "look",
+      "vertical": 0.1
+    },
+    {
+      "op": "aoe",
+      "radius": 3.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 6.0,
+      "per_level": 0.5,
+      "damage_type": "player_attack"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 100,
+      "amplifier": 2
+    }
+  ]
+}

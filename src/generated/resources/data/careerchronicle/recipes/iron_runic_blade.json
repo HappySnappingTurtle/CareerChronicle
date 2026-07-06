@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "careerchronicle:runic_blade"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "careerchronicle:career_ingot"
+    }
+  ],
+  "result": {
+    "item": "careerchronicle:iron_runic_blade"
+  }
+}

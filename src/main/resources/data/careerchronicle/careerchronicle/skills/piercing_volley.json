@@ -1,0 +1,27 @@
+{
+  "display_key": "careerchronicle.skill.piercing_volley",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 24,
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:ranged_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:bow",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "arrow",
+      "count": 2,
+      "speed": 3.05,
+      "damage_bonus": 2.4,
+      "per_level_damage": 0.5,
+      "spread": 10.0,
+      "pierce": true
+    }
+  ]
+}

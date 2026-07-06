@@ -1,0 +1,28 @@
+{
+  "display_key": "careerchronicle.class.rogue",
+  "segment_levels": 10,
+  "grants_skills": [
+    "careerchronicle:shadow_strike",
+    "careerchronicle:smoke_bomb",
+    "careerchronicle:blade_flurry"
+  ],
+  "tags": [
+    "careerchronicle:melee",
+    "careerchronicle:physical",
+    "careerchronicle:stealth"
+  ],
+  "repeat_rewards": [
+    {
+      "required_count": 2,
+      "unlock_skill": "careerchronicle:assassin_mark"
+    },
+    {
+      "required_count": 3,
+      "unlock_skill": "careerchronicle:death_blossom"
+    }
+  ],
+  "required_attributes": {
+    "dex": 12,
+    "str": 8
+  }
+}

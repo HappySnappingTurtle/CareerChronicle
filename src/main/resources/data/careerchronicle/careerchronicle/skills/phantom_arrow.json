@@ -1,0 +1,25 @@
+{
+  "display_key": "careerchronicle.skill.phantom_arrow",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 18,
+  "cooldown_ticks": 80,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:ranged_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:stealth",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "arrow",
+      "count": 1,
+      "speed": 3.5,
+      "damage_bonus": 2.5,
+      "per_level_damage": 0.5
+    }
+  ]
+}

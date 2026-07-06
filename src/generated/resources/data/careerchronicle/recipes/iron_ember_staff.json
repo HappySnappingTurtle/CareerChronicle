@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "careerchronicle:ember_staff"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "careerchronicle:arcane_shard"
+    }
+  ],
+  "result": {
+    "item": "careerchronicle:iron_ember_staff"
+  }
+}

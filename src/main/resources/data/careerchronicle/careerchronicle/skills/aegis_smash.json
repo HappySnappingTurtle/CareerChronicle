@@ -1,0 +1,41 @@
+{
+  "display_key": "careerchronicle.skill.aegis_smash",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 22,
+  "cooldown_ticks": 160,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:defense",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 3.0,
+      "height": 0.9,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 7.0,
+      "per_level": 0.5,
+      "damage_type": "player_attack"
+    },
+    {
+      "op": "knockback",
+      "strength": 0.4,
+      "direction": "away"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 60,
+      "amplifier": 1
+    }
+  ]
+}

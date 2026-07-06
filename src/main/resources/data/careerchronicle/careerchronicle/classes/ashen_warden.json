@@ -1,0 +1,14 @@
+{
+  "display_key": "careerchronicle.class.ashen_warden",
+  "segment_levels": 10,
+  "hidden": true,
+  "unlock_flag": "careerchronicle:ashen_warden_clue",
+  "grants_skills": [
+    "careerchronicle:ashen_bulwark"
+  ],
+  "tags": [
+    "careerchronicle:fire",
+    "careerchronicle:defense",
+    "careerchronicle:hidden"
+  ]
+}

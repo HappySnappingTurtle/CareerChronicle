@@ -1,0 +1,34 @@
+{
+  "display_key": "careerchronicle.skill.sacred_shield",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 20,
+  "cooldown_ticks": 140,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:holy",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:absorption",
+      "duration": 200,
+      "per_level_duration": 20,
+      "amplifier": 2,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:regeneration",
+      "duration": 100,
+      "per_level_duration": 10,
+      "amplifier": 0,
+      "target": "self"
+    }
+  ]
+}

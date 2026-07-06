@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_guardian_shield": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "careerchronicle:guardian_shield"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "careerchronicle:iron_guardian_shield"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_guardian_shield",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "careerchronicle:iron_guardian_shield"
+    ]
+  },
+  "sends_telemetry_event": false
+}

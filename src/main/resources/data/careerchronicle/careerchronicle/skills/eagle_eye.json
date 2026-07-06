@@ -1,0 +1,13 @@
+{
+  "display_key": "careerchronicle.skill.eagle_eye",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 18,
+  "executor": "careerchronicle:eagle_eye",
+  "cooldown_ticks": 180,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:ranged_focus"
+    ]
+  }
+}

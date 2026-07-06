@@ -1,0 +1,98 @@
+{
+  "skill.cast.fire": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/fire", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.fire"
+  },
+  "skill.cast.frost": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/frost", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.frost"
+  },
+  "skill.cast.holy": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/holy", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.holy"
+  },
+  "skill.cast.dark": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/dark", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.dark"
+  },
+  "skill.cast.blade": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/blade", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.blade"
+  },
+  "skill.cast.shield": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/shield", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.shield"
+  },
+  "skill.cast.arrow": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/arrow", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.arrow"
+  },
+  "skill.cast.shadow": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/shadow", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.shadow"
+  },
+  "skill.cast.arcane": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/arcane", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.arcane"
+  },
+  "skill.cast.nature": {
+    "sounds": [{ "name": "careerchronicle:skill/cast/nature", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.cast.nature"
+  },
+  "skill.hit.fire": {
+    "sounds": [{ "name": "careerchronicle:skill/hit/fire", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.hit.fire"
+  },
+  "skill.hit.frost": {
+    "sounds": [{ "name": "careerchronicle:skill/hit/frost", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.hit.frost"
+  },
+  "skill.hit.holy": {
+    "sounds": [{ "name": "careerchronicle:skill/hit/holy", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.hit.holy"
+  },
+  "skill.hit.dark": {
+    "sounds": [{ "name": "careerchronicle:skill/hit/dark", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.hit.dark"
+  },
+  "skill.hit.physical": {
+    "sounds": [{ "name": "careerchronicle:skill/hit/physical", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.skill.hit.physical"
+  },
+  "ui.chronicle_open": {
+    "sounds": [{ "name": "careerchronicle:ui/chronicle_open", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.ui.chronicle_open"
+  },
+  "ui.skill_equip": {
+    "sounds": [{ "name": "careerchronicle:ui/skill_equip", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.ui.skill_equip"
+  },
+  "ui.tab_flip": {
+    "sounds": [{ "name": "careerchronicle:ui/tab_flip", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.ui.tab_flip"
+  },
+  "ui.deny": {
+    "sounds": [{ "name": "careerchronicle:ui/deny", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.ui.deny"
+  },
+  "event.level_up": {
+    "sounds": [{ "name": "careerchronicle:event/level_up", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.event.level_up"
+  },
+  "event.segment_choice": {
+    "sounds": [{ "name": "careerchronicle:event/segment_choice", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.event.segment_choice"
+  },
+  "event.fusion_unlock": {
+    "sounds": [{ "name": "careerchronicle:event/fusion_unlock", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.event.fusion_unlock"
+  },
+  "event.hidden_unlock": {
+    "sounds": [{ "name": "careerchronicle:event/hidden_unlock", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.event.hidden_unlock"
+  },
+  "event.skill_upgrade": {
+    "sounds": [{ "name": "careerchronicle:event/skill_upgrade", "stream": false }],
+    "subtitle": "subtitles.careerchronicle.event.skill_upgrade"
+  }
+}

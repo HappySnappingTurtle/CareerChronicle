@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " SI",
+    "S I",
+    " SI"
+  ],
+  "result": {
+    "item": "careerchronicle:chronicle_recurve"
+  },
+  "show_notification": true
+}

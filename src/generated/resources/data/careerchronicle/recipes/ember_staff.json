@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "careerchronicle:ember_core"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " E ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "careerchronicle:ember_staff"
+  },
+  "show_notification": true
+}

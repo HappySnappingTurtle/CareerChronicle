@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "careerchronicle:iron_chronicle_bow"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "careerchronicle:career_ingot"
+    }
+  ],
+  "result": {
+    "item": "careerchronicle:diamond_chronicle_bow"
+  }
+}

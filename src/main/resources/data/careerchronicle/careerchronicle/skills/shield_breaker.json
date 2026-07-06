@@ -1,0 +1,40 @@
+{
+  "display_key": "careerchronicle.skill.shield_breaker",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 22,
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:defense",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 3.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 9.0,
+      "per_level": 1.0,
+      "damage_type": "player_attack"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:weakness",
+      "duration": 100,
+      "amplifier": 1
+    },
+    {
+      "op": "knockback",
+      "strength": 0.5,
+      "direction": "away"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "display_key": "careerchronicle.skill.guard_stance",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 12,
+  "cooldown_ticks": 140,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:defense",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 120,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 80,
+      "amplifier": 0,
+      "target": "self"
+    }
+  ]
+}

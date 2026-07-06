@@ -1,0 +1,37 @@
+{
+  "display_key": "careerchronicle.skill.seraphic_grace",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 24,
+  "cooldown_ticks": 180,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:holy_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:holy",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "heal",
+      "amount": 5.0,
+      "per_level": 1.0,
+      "target": "ally_area",
+      "radius": 3.6
+    },
+    {
+      "op": "aoe",
+      "radius": 3.6,
+      "filter": "ally"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:regeneration",
+      "duration": 100,
+      "per_level_duration": 20,
+      "amplifier": 0
+    }
+  ]
+}

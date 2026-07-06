@@ -1,0 +1,34 @@
+{
+  "display_key": "careerchronicle.skill.meteor_rite",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 36,
+  "cooldown_ticks": 240,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:fire",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 4.0,
+      "height": 1.2,
+      "filter": "hostile"
+    },
+    {
+      "op": "ignite",
+      "seconds": 6
+    },
+    {
+      "op": "damage",
+      "amount": 7.0,
+      "per_level": 1.0,
+      "damage_type": "magic"
+    }
+  ]
+}

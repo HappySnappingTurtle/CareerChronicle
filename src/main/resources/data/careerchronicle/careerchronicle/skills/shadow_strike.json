@@ -1,0 +1,13 @@
+{
+  "display_key": "careerchronicle.skill.shadow_strike",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 16,
+  "executor": "careerchronicle:shadow_strike",
+  "cooldown_ticks": 60,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  }
+}

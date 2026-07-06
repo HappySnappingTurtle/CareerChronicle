@@ -1,0 +1,37 @@
+{
+  "display_key": "careerchronicle.skill.frozen_ground",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 20,
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:ice",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 4.0,
+      "height": 0.9,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 3.0,
+      "per_level": 0.5,
+      "damage_type": "magic"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 100,
+      "per_level_duration": 10,
+      "amplifier": 2
+    }
+  ]
+}

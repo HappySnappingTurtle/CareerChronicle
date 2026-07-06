@@ -1,0 +1,17 @@
+{
+  "display_key": "careerchronicle.class.lich",
+  "segment_levels": 10,
+  "hidden": true,
+  "unlock_flag": "careerchronicle:lich_clue",
+  "grants_skills": [
+    "careerchronicle:frozen_domain",
+    "careerchronicle:legion_of_the_dead",
+    "careerchronicle:lich_ascension"
+  ],
+  "tags": [
+    "careerchronicle:dark",
+    "careerchronicle:ice",
+    "careerchronicle:magic",
+    "careerchronicle:hidden"
+  ]
+}

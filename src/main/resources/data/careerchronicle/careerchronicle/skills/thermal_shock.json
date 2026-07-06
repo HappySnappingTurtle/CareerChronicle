@@ -1,0 +1,39 @@
+{
+  "display_key": "careerchronicle.skill.thermal_shock",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 22,
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:fire",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 4.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 7.0,
+      "per_level": 1.0,
+      "damage_type": "magic"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 80,
+      "amplifier": 1
+    },
+    {
+      "op": "ignite",
+      "seconds": 3
+    }
+  ]
+}

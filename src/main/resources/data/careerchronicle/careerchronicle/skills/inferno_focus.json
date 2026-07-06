@@ -1,0 +1,44 @@
+{
+  "display_key": "careerchronicle.skill.inferno_focus",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 26,
+  "cooldown_ticks": 160,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:fire",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:strength",
+      "duration": 160,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 200,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "aoe",
+      "radius": 2.8,
+      "height": 1.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "ignite",
+      "seconds": 4
+    }
+  ]
+}

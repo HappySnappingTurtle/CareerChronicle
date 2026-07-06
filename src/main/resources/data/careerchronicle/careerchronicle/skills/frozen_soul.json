@@ -1,0 +1,41 @@
+{
+  "display_key": "careerchronicle.skill.frozen_soul",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 26,
+  "cooldown_ticks": 160,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:dark",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 5.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 7.0,
+      "per_level": 1.0,
+      "damage_type": "magic"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 140,
+      "amplifier": 3
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:wither",
+      "duration": 60,
+      "amplifier": 0
+    }
+  ]
+}

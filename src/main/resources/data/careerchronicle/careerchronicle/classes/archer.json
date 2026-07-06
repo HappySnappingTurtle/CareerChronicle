@@ -1,0 +1,23 @@
+{
+  "display_key": "careerchronicle.class.archer",
+  "segment_levels": 10,
+  "grants_skills": [
+    "careerchronicle:charged_shot",
+    "careerchronicle:scatter_shot",
+    "careerchronicle:snare_shot"
+  ],
+  "tags": [
+    "careerchronicle:bow",
+    "careerchronicle:ranged"
+  ],
+  "repeat_rewards": [
+    {
+      "required_count": 2,
+      "unlock_skill": "careerchronicle:eagle_eye"
+    },
+    {
+      "required_count": 3,
+      "unlock_skill": "careerchronicle:storm_marksman"
+    }
+  ]
+}

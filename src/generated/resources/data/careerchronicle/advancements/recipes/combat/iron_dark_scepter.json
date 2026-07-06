@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dark_scepter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "careerchronicle:dark_scepter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "careerchronicle:iron_dark_scepter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_scepter",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "careerchronicle:iron_dark_scepter"
+    ]
+  },
+  "sends_telemetry_event": false
+}

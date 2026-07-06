@@ -1,0 +1,34 @@
+{
+  "display_key": "careerchronicle.skill.silent_prayer",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 16,
+  "cooldown_ticks": 100,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:holy",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:invisibility",
+      "duration": 120,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:regeneration",
+      "duration": 100,
+      "per_level_duration": 20,
+      "amplifier": 1,
+      "target": "self"
+    }
+  ]
+}

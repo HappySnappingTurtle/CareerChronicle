@@ -1,0 +1,7 @@
+{
+  "required_class_counts": {
+    "careerchronicle:necromancer": 1,
+    "careerchronicle:priest": 1
+  },
+  "unlock_skill": "careerchronicle:twilight_mend"
+}

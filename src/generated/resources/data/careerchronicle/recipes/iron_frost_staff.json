@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "careerchronicle:frost_crystal"
+    },
+    {
+      "item": "careerchronicle:frost_crystal"
+    }
+  ],
+  "result": {
+    "item": "careerchronicle:iron_frost_staff"
+  }
+}

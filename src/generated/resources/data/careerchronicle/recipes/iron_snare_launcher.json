@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "careerchronicle:snare_launcher"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "careerchronicle:career_ingot"
+    }
+  ],
+  "result": {
+    "item": "careerchronicle:iron_snare_launcher"
+  }
+}

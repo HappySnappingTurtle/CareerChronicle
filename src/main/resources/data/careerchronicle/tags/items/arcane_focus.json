@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "careerchronicle:ember_staff",
+    "careerchronicle:frost_staff",
+    "careerchronicle:dark_scepter",
+    "careerchronicle:iron_ember_staff",
+    "careerchronicle:diamond_ember_staff",
+    "careerchronicle:iron_frost_staff",
+    "careerchronicle:diamond_frost_staff",
+    "careerchronicle:diamond_dark_scepter",
+    "careerchronicle:infernal_scepter",
+    "careerchronicle:glacial_heart",
+    "careerchronicle:lich_phylactery",
+    "careerchronicle:staff_of_ainz"
+  ]
+}

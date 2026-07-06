@@ -1,0 +1,13 @@
+{
+  "display_key": "careerchronicle.skill.death_strike",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 22,
+  "executor": "careerchronicle:death_strike",
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  }
+}

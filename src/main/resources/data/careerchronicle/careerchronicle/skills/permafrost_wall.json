@@ -1,0 +1,42 @@
+{
+  "display_key": "careerchronicle.skill.permafrost_wall",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 24,
+  "cooldown_ticks": 160,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:ice",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 200,
+      "per_level_duration": 20,
+      "amplifier": 2,
+      "target": "self"
+    },
+    {
+      "op": "aoe",
+      "radius": 4.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 120,
+      "amplifier": 2
+    },
+    {
+      "op": "knockback",
+      "strength": 0.3,
+      "direction": "away"
+    }
+  ]
+}

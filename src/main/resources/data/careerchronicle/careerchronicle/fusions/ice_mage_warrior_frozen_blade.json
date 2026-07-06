@@ -1,0 +1,7 @@
+{
+  "required_class_counts": {
+    "careerchronicle:ice_mage": 1,
+    "careerchronicle:warrior": 1
+  },
+  "unlock_skill": "careerchronicle:frozen_blade"
+}

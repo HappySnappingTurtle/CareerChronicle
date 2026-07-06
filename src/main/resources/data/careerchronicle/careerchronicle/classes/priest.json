@@ -1,0 +1,24 @@
+{
+  "display_key": "careerchronicle.class.priest",
+  "segment_levels": 10,
+  "grants_skills": [
+    "careerchronicle:mend",
+    "careerchronicle:holy_nova",
+    "careerchronicle:blessing"
+  ],
+  "tags": [
+    "careerchronicle:holy",
+    "careerchronicle:support",
+    "careerchronicle:magic"
+  ],
+  "repeat_rewards": [
+    {
+      "required_count": 2,
+      "unlock_skill": "careerchronicle:seraphic_grace"
+    },
+    {
+      "required_count": 3,
+      "unlock_skill": "careerchronicle:sanctuary_descent"
+    }
+  ]
+}

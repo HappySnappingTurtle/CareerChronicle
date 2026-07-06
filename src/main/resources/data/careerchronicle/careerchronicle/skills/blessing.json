@@ -1,0 +1,34 @@
+{
+  "display_key": "careerchronicle.skill.blessing",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 22,
+  "cooldown_ticks": 200,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:holy_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:holy",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:strength",
+      "duration": 160,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:regeneration",
+      "duration": 100,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    }
+  ]
+}

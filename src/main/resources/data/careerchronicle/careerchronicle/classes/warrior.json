@@ -1,0 +1,24 @@
+{
+  "display_key": "careerchronicle.class.warrior",
+  "segment_levels": 10,
+  "grants_skills": [
+    "careerchronicle:lunge_strike",
+    "careerchronicle:guard_stance",
+    "careerchronicle:ground_slam"
+  ],
+  "tags": [
+    "careerchronicle:melee",
+    "careerchronicle:physical",
+    "careerchronicle:defense"
+  ],
+  "repeat_rewards": [
+    {
+      "required_count": 2,
+      "unlock_skill": "careerchronicle:iron_vanguard"
+    },
+    {
+      "required_count": 3,
+      "unlock_skill": "careerchronicle:unyielding_colossus"
+    }
+  ]
+}

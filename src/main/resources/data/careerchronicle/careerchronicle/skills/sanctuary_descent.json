@@ -1,0 +1,61 @@
+{
+  "display_key": "careerchronicle.skill.sanctuary_descent",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 34,
+  "cooldown_ticks": 240,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:holy_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:holy",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "heal",
+      "amount": 6.0,
+      "per_level": 1.0,
+      "target": "ally_area",
+      "radius": 4.2
+    },
+    {
+      "op": "aoe",
+      "radius": 4.2,
+      "filter": "ally"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:regeneration",
+      "duration": 140,
+      "per_level_duration": 20,
+      "amplifier": 1
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 100,
+      "per_level_duration": 20,
+      "amplifier": 0
+    },
+    {
+      "op": "aoe",
+      "radius": 4.2,
+      "filter": "hostile"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 100,
+      "amplifier": 1
+    },
+    {
+      "op": "damage",
+      "amount": 3.0,
+      "per_level": 0.5,
+      "damage_type": "magic"
+    }
+  ]
+}

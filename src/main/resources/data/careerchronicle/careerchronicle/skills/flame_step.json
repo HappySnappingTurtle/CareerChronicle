@@ -1,0 +1,24 @@
+{
+  "display_key": "careerchronicle.skill.flame_step",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 14,
+  "cooldown_ticks": 100,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:fire",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "dash",
+      "distance": 1.25,
+      "direction": "look",
+      "vertical": 0.18
+    }
+  ]
+}

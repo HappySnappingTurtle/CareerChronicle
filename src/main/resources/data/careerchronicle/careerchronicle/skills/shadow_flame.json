@@ -1,0 +1,39 @@
+{
+  "display_key": "careerchronicle.skill.shadow_flame",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 22,
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:fire",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 3.5,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 6.0,
+      "per_level": 0.5,
+      "damage_type": "magic"
+    },
+    {
+      "op": "ignite",
+      "seconds": 4
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:blindness",
+      "duration": 40,
+      "amplifier": 0
+    }
+  ]
+}

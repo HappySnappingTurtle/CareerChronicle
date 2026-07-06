@@ -1,0 +1,13 @@
+{
+  "display_key": "careerchronicle.skill.smoke_bomb",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 14,
+  "executor": "careerchronicle:smoke_bomb",
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  }
+}

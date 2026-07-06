@@ -1,0 +1,29 @@
+{
+  "display_key": "careerchronicle.class.guardian",
+  "segment_levels": 10,
+  "grants_skills": [
+    "careerchronicle:shield_wall",
+    "careerchronicle:provoke",
+    "careerchronicle:aegis_smash"
+  ],
+  "tags": [
+    "careerchronicle:melee",
+    "careerchronicle:physical",
+    "careerchronicle:defense",
+    "careerchronicle:holy"
+  ],
+  "repeat_rewards": [
+    {
+      "required_count": 2,
+      "unlock_skill": "careerchronicle:fortified_bulwark"
+    },
+    {
+      "required_count": 3,
+      "unlock_skill": "careerchronicle:impregnable_fortress"
+    }
+  ],
+  "required_attributes": {
+    "con": 12,
+    "str": 8
+  }
+}

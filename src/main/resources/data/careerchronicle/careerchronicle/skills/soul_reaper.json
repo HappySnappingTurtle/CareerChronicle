@@ -1,0 +1,41 @@
+{
+  "display_key": "careerchronicle.skill.soul_reaper",
+  "type": "fusion",
+  "resource": "mana",
+  "resource_cost": 24,
+  "cooldown_ticks": 140,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:dark",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 4.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 6.0,
+      "per_level": 0.5,
+      "damage_type": "magic"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:wither",
+      "duration": 80,
+      "amplifier": 0
+    },
+    {
+      "op": "heal",
+      "amount": 4.0,
+      "per_level": 0.5,
+      "target": "self"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "display_key": "careerchronicle.skill.shadow_guard",
+  "type": "fusion",
+  "resource": "stamina",
+  "resource_cost": 20,
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:stealth",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 160,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:invisibility",
+      "duration": 80,
+      "per_level_duration": 10,
+      "amplifier": 0,
+      "target": "self"
+    }
+  ]
+}

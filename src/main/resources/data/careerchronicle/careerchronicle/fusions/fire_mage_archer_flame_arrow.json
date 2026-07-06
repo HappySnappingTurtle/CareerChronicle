@@ -1,0 +1,7 @@
+{
+  "required_class_counts": {
+    "careerchronicle:fire_mage": 1,
+    "careerchronicle:archer": 1
+  },
+  "unlock_skill": "careerchronicle:flame_arrow"
+}

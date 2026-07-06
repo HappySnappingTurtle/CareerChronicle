@@ -1,0 +1,41 @@
+{
+  "display_key": "careerchronicle.skill.ground_slam",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 24,
+  "cooldown_ticks": 160,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:melee",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 3.0,
+      "height": 0.9,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 4.5,
+      "per_level": 0.5,
+      "damage_type": "player_attack"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 60,
+      "amplifier": 1
+    },
+    {
+      "op": "knockback",
+      "strength": 0.35,
+      "direction": "away"
+    }
+  ]
+}

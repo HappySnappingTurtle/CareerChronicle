@@ -1,0 +1,63 @@
+{
+  "display_key": "careerchronicle.skill.ashen_bulwark",
+  "type": "active",
+  "resource": "stamina",
+  "resource_cost": 24,
+  "cooldown_ticks": 220,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:melee_weapon"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:fire",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:resistance",
+      "duration": 160,
+      "per_level_duration": 20,
+      "amplifier": 1,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 220,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:absorption",
+      "duration": 160,
+      "per_level_duration": 20,
+      "amplifier": 0,
+      "target": "self"
+    },
+    {
+      "op": "aoe",
+      "radius": 3.0,
+      "height": 0.9,
+      "filter": "hostile"
+    },
+    {
+      "op": "ignite",
+      "seconds": 4
+    },
+    {
+      "op": "damage",
+      "amount": 4.0,
+      "per_level": 0.5,
+      "damage_type": "magic"
+    },
+    {
+      "op": "knockback",
+      "strength": 0.28,
+      "direction": "away"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "display_key": "careerchronicle.skill.bone_spike",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 18,
+  "cooldown_ticks": 70,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:dark",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "projectile",
+      "entity": "careerchronicle:career_fireball",
+      "speed": 1.4,
+      "damage": 6.0,
+      "per_level_damage": 0.5,
+      "burn_seconds": 0
+    }
+  ]
+}

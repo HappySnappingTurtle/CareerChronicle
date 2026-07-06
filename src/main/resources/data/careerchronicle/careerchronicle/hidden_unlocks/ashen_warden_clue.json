@@ -1,0 +1,14 @@
+{
+  "display_key": "careerchronicle.hidden.ashen_warden",
+  "clue_key": "careerchronicle.hidden.ashen_warden.clue",
+  "revealed_key": "careerchronicle.hidden.ashen_warden.revealed",
+  "required_class_counts": {
+    "careerchronicle:fire_mage": 1,
+    "careerchronicle:warrior": 1
+  },
+  "required_tag_scores": {
+    "careerchronicle:fire": 1,
+    "careerchronicle:defense": 1
+  },
+  "unlock_flag": "careerchronicle:ashen_warden_clue"
+}

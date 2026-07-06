@@ -1,0 +1,7 @@
+{
+  "required_class_counts": {
+    "careerchronicle:necromancer": 1,
+    "careerchronicle:archer": 1
+  },
+  "unlock_skill": "careerchronicle:spectral_arrow"
+}

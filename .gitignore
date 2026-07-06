@@ -1,0 +1,40 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+run-data
+
+# Files from Forge MDK
+forge*changelog.txt
+
+# runtime outputs
+gametest_output.log
+gametest_pid.txt
+gametest_run.log
+
+# gradle home cache
+.gradle-home
+
+# claude code
+.claude
+
+# OS
+.DS_Store

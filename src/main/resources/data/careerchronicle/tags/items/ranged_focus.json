@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "careerchronicle:chronicle_recurve",
+    "careerchronicle:snare_launcher",
+    "careerchronicle:iron_chronicle_bow",
+    "careerchronicle:diamond_chronicle_bow",
+    "careerchronicle:windrunner",
+    "careerchronicle:predator_bow",
+    "minecraft:bow",
+    "minecraft:crossbow"
+  ]
+}

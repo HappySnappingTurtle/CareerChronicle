@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "careerchronicle:career_ingot"
+    },
+    {
+      "item": "careerchronicle:career_ingot"
+    },
+    {
+      "item": "careerchronicle:holy_relic"
+    }
+  ],
+  "result": {
+    "item": "careerchronicle:diamond_guardian_mace"
+  }
+}

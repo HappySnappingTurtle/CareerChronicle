@@ -1,0 +1,34 @@
+{
+  "display_key": "careerchronicle.skill.ember_burst",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 30,
+  "cooldown_ticks": 120,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:fire",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 3.5,
+      "height": 1.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "ignite",
+      "seconds": 4
+    },
+    {
+      "op": "damage",
+      "amount": 5.0,
+      "per_level": 0.5,
+      "damage_type": "player_attack"
+    }
+  ]
+}

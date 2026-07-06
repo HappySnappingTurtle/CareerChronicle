@@ -1,0 +1,23 @@
+{
+  "display_key": "careerchronicle.class.fire_mage",
+  "segment_levels": 10,
+  "grants_skills": [
+    "careerchronicle:fireball",
+    "careerchronicle:ember_burst",
+    "careerchronicle:flame_step"
+  ],
+  "tags": [
+    "careerchronicle:fire",
+    "careerchronicle:magic"
+  ],
+  "repeat_rewards": [
+    {
+      "required_count": 2,
+      "unlock_skill": "careerchronicle:inferno_focus"
+    },
+    {
+      "required_count": 3,
+      "unlock_skill": "careerchronicle:meteor_rite"
+    }
+  ]
+}

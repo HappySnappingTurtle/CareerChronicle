@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "careerchronicle:item/iron_chronicle_bow"
+  }
+}

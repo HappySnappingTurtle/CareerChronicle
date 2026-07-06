@@ -1,0 +1,17 @@
+{
+  "display_key": "careerchronicle.class.death_knight",
+  "segment_levels": 10,
+  "hidden": true,
+  "unlock_flag": "careerchronicle:death_knight_clue",
+  "grants_skills": [
+    "careerchronicle:withering_strike",
+    "careerchronicle:runic_ward",
+    "careerchronicle:death_domain"
+  ],
+  "tags": [
+    "careerchronicle:melee",
+    "careerchronicle:dark",
+    "careerchronicle:defense",
+    "careerchronicle:hidden"
+  ]
+}

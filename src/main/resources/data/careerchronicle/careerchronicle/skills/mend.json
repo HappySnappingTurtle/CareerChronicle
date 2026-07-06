@@ -1,0 +1,24 @@
+{
+  "display_key": "careerchronicle.skill.mend",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 18,
+  "cooldown_ticks": 100,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:holy_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:heal",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "heal",
+      "amount": 6.0,
+      "per_level": 1.0,
+      "target": "self"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "required_class_counts": {
+    "careerchronicle:guardian": 1,
+    "careerchronicle:fire_mage": 1
+  },
+  "unlock_skill": "careerchronicle:flame_ward"
+}

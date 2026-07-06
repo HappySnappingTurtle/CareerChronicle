@@ -1,0 +1,22 @@
+{
+  "display_key": "careerchronicle.race.demon",
+  "allowed_classes": [
+    "careerchronicle:fire_mage",
+    "careerchronicle:archer",
+    "careerchronicle:warrior",
+    "careerchronicle:guardian",
+    "careerchronicle:rogue",
+    "careerchronicle:necromancer"
+  ],
+  "traits": [
+    "careerchronicle:infernal_pact"
+  ],
+  "biome_tags": [
+    "nether",
+    "basalt",
+    "crimson",
+    "warped",
+    "badlands",
+    "lava"
+  ]
+}

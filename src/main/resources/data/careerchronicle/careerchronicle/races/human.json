@@ -1,0 +1,24 @@
+{
+  "display_key": "careerchronicle.race.human",
+  "allowed_classes": [
+    "careerchronicle:fire_mage",
+    "careerchronicle:archer",
+    "careerchronicle:warrior",
+    "careerchronicle:priest",
+    "careerchronicle:guardian",
+    "careerchronicle:rogue",
+    "careerchronicle:ice_mage",
+    "careerchronicle:necromancer"
+  ],
+  "traits": [
+    "careerchronicle:adaptable"
+  ],
+  "biome_tags": [
+    "plains",
+    "forest",
+    "river",
+    "beach",
+    "meadow",
+    "sunflower"
+  ]
+}

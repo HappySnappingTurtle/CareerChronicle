@@ -1,0 +1,41 @@
+{
+  "display_key": "careerchronicle.skill.frozen_domain",
+  "type": "active",
+  "resource": "mana",
+  "resource_cost": 30,
+  "cooldown_ticks": 200,
+  "requirements": {
+    "equipment_tags": [
+      "careerchronicle:arcane_focus"
+    ]
+  },
+  "upgrade": {
+    "source": "tag:dark",
+    "max_level": 5
+  },
+  "effects": [
+    {
+      "op": "aoe",
+      "radius": 5.0,
+      "filter": "hostile"
+    },
+    {
+      "op": "damage",
+      "amount": 8.0,
+      "per_level": 1.0,
+      "damage_type": "magic"
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:slowness",
+      "duration": 120,
+      "amplifier": 2
+    },
+    {
+      "op": "apply_effect",
+      "effect": "minecraft:wither",
+      "duration": 80,
+      "amplifier": 0
+    }
+  ]
+}

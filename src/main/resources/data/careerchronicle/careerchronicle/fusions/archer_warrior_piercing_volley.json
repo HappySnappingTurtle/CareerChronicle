@@ -1,0 +1,7 @@
+{
+  "required_class_counts": {
+    "careerchronicle:archer": 1,
+    "careerchronicle:warrior": 1
+  },
+  "unlock_skill": "careerchronicle:piercing_volley"
+}
