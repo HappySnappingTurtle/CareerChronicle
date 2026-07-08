@@ -38,3 +38,7 @@ gametest_run.log
 
 # OS
 .DS_Store
+
+# design docs (local only)
+*.md
+!README.md
