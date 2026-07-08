@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 import struct
+import sys
 import zlib
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 TEXTURE_ROOT = ROOT / "src/main/resources/assets/careerchronicle/textures"
+LOGO_PATH = ROOT / "src/main/resources/careerchronicle-logo.png"
 
 
 def png(path, pixels):
@@ -517,7 +519,210 @@ def fireball_projectile():
     return img
 
 
-def main():
+def canvas_size(width, height, bg=(0, 0, 0, 0)):
+    return [[bg for _ in range(width)] for _ in range(height)]
+
+
+def set_px_size(img, x, y, color):
+    if 0 <= y < len(img) and 0 <= x < len(img[y]):
+        img[y][x] = color
+
+
+def rect_size(img, x0, y0, x1, y1, color):
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            set_px_size(img, x, y, color)
+
+
+def line_size(img, x0, y0, x1, y1, color):
+    dx = abs(x1 - x0)
+    sx = 1 if x0 < x1 else -1
+    dy = -abs(y1 - y0)
+    sy = 1 if y0 < y1 else -1
+    err = dx + dy
+    while True:
+        set_px_size(img, x0, y0, color)
+        if x0 == x1 and y0 == y1:
+            break
+        e2 = 2 * err
+        if e2 >= dy:
+            err += dy
+            x0 += sx
+        if e2 <= dx:
+            err += dx
+            y0 += sy
+
+
+def thick_line_size(img, x0, y0, x1, y1, color, thickness=1):
+    radius = max(0, thickness // 2)
+    for oy in range(-radius, radius + 1):
+        for ox in range(-radius, radius + 1):
+            if ox * ox + oy * oy <= radius * radius:
+                line_size(img, x0 + ox, y0 + oy, x1 + ox, y1 + oy, color)
+
+
+def circle_size(img, cx, cy, radius, color):
+    r2 = radius * radius
+    for y in range(cy - radius, cy + radius + 1):
+        for x in range(cx - radius, cx + radius + 1):
+            if (x - cx) * (x - cx) + (y - cy) * (y - cy) <= r2:
+                set_px_size(img, x, y, color)
+
+
+def diamond_size(img, cx, cy, radius, color):
+    for y in range(cy - radius, cy + radius + 1):
+        for x in range(cx - radius, cx + radius + 1):
+            if abs(x - cx) + abs(y - cy) <= radius:
+                set_px_size(img, x, y, color)
+
+
+def diamond_outline(img, cx, cy, radius, thickness, color):
+    inner = radius - thickness
+    for y in range(cy - radius, cy + radius + 1):
+        for x in range(cx - radius, cx + radius + 1):
+            d = abs(x - cx) + abs(y - cy)
+            if inner < d <= radius:
+                set_px_size(img, x, y, color)
+
+
+def polygon_size(img, points, color):
+    min_x = max(0, min(x for x, _ in points))
+    max_x = min(len(img[0]) - 1, max(x for x, _ in points))
+    min_y = max(0, min(y for _, y in points))
+    max_y = min(len(img) - 1, max(y for _, y in points))
+    for y in range(min_y, max_y + 1):
+        for x in range(min_x, max_x + 1):
+            if point_in_polygon(x + 0.5, y + 0.5, points):
+                set_px_size(img, x, y, color)
+
+
+def polygon_outline_size(img, points, color, thickness=1):
+    for i, (x0, y0) in enumerate(points):
+        x1, y1 = points[(i + 1) % len(points)]
+        thick_line_size(img, x0, y0, x1, y1, color, thickness)
+
+
+def point_in_polygon(px, py, points):
+    inside = False
+    j = len(points) - 1
+    for i, (xi, yi) in enumerate(points):
+        xj, yj = points[j]
+        intersects = ((yi > py) != (yj > py)) and (
+                px < (xj - xi) * (py - yi) / ((yj - yi) or 1e-9) + xi)
+        if intersects:
+            inside = not inside
+        j = i
+    return inside
+
+
+def careerchronicle_logo():
+    img = canvas_size(128, 128)
+    deep = (8, 12, 18, 255)
+    plate = (17, 24, 34, 255)
+    plate_hi = (38, 50, 62, 255)
+    gold = (220, 168, 70, 255)
+    pale_gold = (255, 226, 128, 255)
+    ember = (232, 74, 28, 255)
+    flame = (255, 160, 46, 255)
+    frost = (112, 218, 246, 255)
+    ice = (214, 250, 255, 255)
+    holy = (252, 232, 130, 255)
+    steel = (156, 166, 174, 255)
+    bright_steel = (220, 230, 238, 255)
+    staff_wood = (116, 76, 46, 255)
+    staff_dark = (70, 44, 30, 255)
+    ink = (4, 7, 12, 255)
+
+    diamond_size(img, 64, 64, 59, deep)
+    diamond_size(img, 64, 64, 54, plate)
+    diamond_outline(img, 64, 64, 59, 4, gold)
+    diamond_outline(img, 64, 64, 46, 2, plate_hi)
+
+    # Light staff: straight shaft, grip rings, orb head, and visible radiance.
+    rect_size(img, 59, 28, 68, 113, staff_dark)
+    rect_size(img, 62, 28, 65, 113, staff_wood)
+    rect_size(img, 56, 82, 71, 88, gold)
+    rect_size(img, 58, 84, 69, 86, pale_gold)
+    rect_size(img, 56, 102, 71, 107, gold)
+    circle_size(img, 64, 24, 15, (102, 78, 38, 255))
+    circle_size(img, 64, 24, 11, holy)
+    circle_size(img, 64, 24, 5, (255, 255, 236, 255))
+    for x0, y0, x1, y1 in [
+        (64, 3, 64, 13), (64, 35, 64, 48),
+        (40, 24, 52, 24), (76, 24, 88, 24),
+        (47, 7, 56, 16), (81, 7, 72, 16),
+        (47, 41, 56, 32), (81, 41, 72, 32),
+    ]:
+        thick_line_size(img, x0, y0, x1, y1, pale_gold, 2)
+
+    # Ice dagger: short broad blade, compact guard, small handle.
+    dagger_outline = [(17, 49), (33, 35), (67, 69), (57, 84)]
+    dagger_fill = [(23, 49), (33, 40), (62, 70), (57, 78)]
+    polygon_size(img, dagger_outline, (28, 56, 74, 255))
+    polygon_size(img, dagger_fill, ice)
+    polygon_outline_size(img, dagger_outline, frost, 2)
+    thick_line_size(img, 25, 48, 59, 74, frost, 2)
+    thick_line_size(img, 51, 86, 73, 64, (44, 86, 104, 255), 5)
+    thick_line_size(img, 52, 85, 72, 65, frost, 2)
+    thick_line_size(img, 67, 79, 86, 98, staff_dark, 7)
+    thick_line_size(img, 69, 81, 84, 96, steel, 3)
+    diamond_size(img, 89, 101, 5, frost)
+    for points in [
+        [(20, 26), (27, 33), (17, 34)],
+        [(8, 46), (18, 44), (13, 55)],
+        [(31, 23), (36, 31), (27, 30)],
+        [(30, 52), (39, 57), (29, 61)],
+    ]:
+        polygon_size(img, points, ice)
+        polygon_outline_size(img, points, frost, 1)
+
+    # Flame sword: long tapered blade with crossguard, hilt, pommel, and fire on the upper blade.
+    sword_outline = [(100, 22), (112, 34), (56, 91), (43, 96), (33, 86), (48, 79)]
+    sword_fill = [(100, 29), (105, 34), (54, 84), (45, 90), (39, 86), (51, 78)]
+    polygon_size(img, sword_outline, (58, 64, 72, 255))
+    polygon_size(img, sword_fill, bright_steel)
+    polygon_outline_size(img, sword_outline, steel, 2)
+    thick_line_size(img, 101, 31, 43, 87, steel, 2)
+    thick_line_size(img, 36, 78, 58, 101, gold, 6)
+    thick_line_size(img, 38, 79, 56, 98, pale_gold, 2)
+    thick_line_size(img, 38, 96, 21, 113, staff_dark, 8)
+    thick_line_size(img, 39, 96, 24, 111, gold, 3)
+    circle_size(img, 18, 116, 5, gold)
+
+    flame_shapes = [
+        [(94, 21), (100, 6), (104, 23)],
+        [(104, 26), (119, 20), (109, 37)],
+        [(91, 35), (101, 28), (99, 45)],
+        [(84, 43), (94, 37), (92, 53)],
+        [(107, 18), (113, 8), (115, 25)],
+    ]
+    for points in flame_shapes:
+        polygon_size(img, points, ember)
+        polygon_outline_size(img, points, flame, 1)
+    for points in [
+        [(99, 20), (102, 12), (104, 23)],
+        [(104, 29), (112, 25), (108, 34)],
+        [(91, 40), (96, 36), (95, 45)],
+    ]:
+        polygon_size(img, points, pale_gold)
+
+    # Central build socket where the three forms overlap.
+    diamond_size(img, 64, 67, 12, ink)
+    diamond_size(img, 64, 67, 8, (28, 38, 50, 255))
+    diamond_outline(img, 64, 67, 12, 2, pale_gold)
+    circle_size(img, 64, 67, 3, (255, 255, 230, 255))
+    return img
+
+
+def main(argv=None):
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if argv == ["--logo-only"]:
+        png(LOGO_PATH, careerchronicle_logo())
+        print(f"generated logo: {LOGO_PATH.relative_to(ROOT)}")
+        return
+    if argv:
+        raise SystemExit("usage: image2_raw_generate.py [--logo-only]")
+
     skill_icons = {
         "fireball": fireball(),
         "ember_burst": ember_burst(),
@@ -581,9 +786,10 @@ def main():
     }
     for name, pixels in projectile_textures.items():
         png(TEXTURE_ROOT / f"entity/career_projectile/{name}.png", pixels)
+    png(LOGO_PATH, careerchronicle_logo())
     print(f"generated {len(skill_icons)} skill icons, {len(class_icons)} class icons, "
           f"{len(race_icons)} race icons, {len(item_icons)} item textures and "
-          f"{len(projectile_textures)} projectile textures")
+          f"{len(projectile_textures)} projectile textures, plus logo")
 
 
 if __name__ == "__main__":
