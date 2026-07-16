@@ -1,0 +1,22 @@
+{
+  "id": "careerchronicle:cast_onehand_slash",
+  "_comment": "阶段3-任务5 rev2 (基于《阶段3-骨骼旋转坐标系统参考文档》重新设计, 原rev1的-100度peak实测从未真正生效): 幅度压到20-50度安全区间, 保留'后摆高抬->横扫发力->收势'的节奏. 绑定lunge_strike. 上半身only.",
+  "duration_ticks": 12,
+  "loop": false,
+  "tracks": {
+    "right_arm": [
+      { "tick": 0, "pitch": 0, "yaw": 0, "roll": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": -50, "yaw": 20, "roll": 10, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": -10, "yaw": -30, "roll": -15, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 5, "yaw": -40, "roll": -20, "easing": "ease_in_out_sine" },
+      { "tick": 12, "pitch": 0, "yaw": 0, "roll": 0, "easing": "linear" }
+    ],
+    "body": [
+      { "tick": 0, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "yaw": 15, "easing": "ease_in_out_sine" },
+      { "tick": 6, "yaw": -10, "easing": "ease_out_expo" },
+      { "tick": 9, "yaw": -11, "easing": "ease_in_out_sine" },
+      { "tick": 12, "yaw": 0, "easing": "linear" }
+    ]
+  }
+}

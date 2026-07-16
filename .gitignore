@@ -29,6 +29,7 @@ forge*changelog.txt
 gametest_output.log
 gametest_pid.txt
 gametest_run.log
+logs
 
 # gradle home cache
 .gradle-home

@@ -1,0 +1,14 @@
+[
+  {
+    "op": "sound",
+    "when": "cast",
+    "id": "careerchronicle:skill.cast.frost"
+  },
+  {
+    "op": "particles",
+    "when": "cast",
+    "id": "minecraft:snowflake",
+    "count": 12,
+    "spread": 0.6
+  }
+]

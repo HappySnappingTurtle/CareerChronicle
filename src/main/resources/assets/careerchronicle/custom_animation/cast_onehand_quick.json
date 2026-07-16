@@ -1,0 +1,20 @@
+{
+  "id": "careerchronicle:cast_onehand_quick",
+  "_comment": "阶段3-任务5 rev2 (基于《阶段3-骨骼旋转坐标系统参考文档》重新设计, 原rev1的-70度peak实测从未真正生效, 修复setupAnim()渲染时机bug后-70度会显得过于夸张): 幅度压到20-45度安全区间, 保留原有节奏(预备->发力->收势)与body配合. yaw分量保留但不作为设计重点(默认背后视角下基本不可见, 实测确认). 绑定fireball. 上半身only, 无腿部track.",
+  "duration_ticks": 10,
+  "loop": false,
+  "tracks": {
+    "right_arm": [
+      { "tick": 0, "pitch": 0, "roll": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": -15, "roll": 8, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": -45, "roll": -10, "easing": "ease_out_expo" },
+      { "tick": 10, "pitch": 0, "roll": 0, "easing": "linear" }
+    ],
+    "body": [
+      { "tick": 0, "pitch": 0, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": 3, "yaw": -3, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": -3, "yaw": 3, "easing": "ease_out_expo" },
+      { "tick": 10, "pitch": 0, "yaw": 0, "easing": "linear" }
+    ]
+  }
+}

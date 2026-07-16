@@ -17,7 +17,7 @@ public record SkillDef(
         Requirements requirements,
         List<JsonObject> effects,
         UpgradeRule upgrade,
-        FxSpec fx
+        List<FxComponent> fx
 ) {
     public SkillDef {
         type = type == null || type.isBlank() ? "active" : type.trim().toLowerCase(Locale.ROOT);
@@ -27,7 +27,7 @@ public record SkillDef(
         requirements = requirements == null ? Requirements.EMPTY : requirements;
         effects = effects == null ? List.of() : List.copyOf(effects);
         upgrade = upgrade == null ? UpgradeRule.NONE : upgrade;
-        fx = fx == null ? FxSpec.EMPTY : fx;
+        fx = fx == null ? List.of() : List.copyOf(fx);
     }
 
     public boolean hasComponentEffects() {

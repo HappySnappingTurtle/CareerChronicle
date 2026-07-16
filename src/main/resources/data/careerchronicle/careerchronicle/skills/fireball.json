@@ -22,5 +22,55 @@
       "per_level_damage": 1.0,
       "burn_seconds": 4
     }
+  ],
+  "fx": [
+    {
+      "op": "anim",
+      "when": "cast",
+      "id": "careerchronicle:cast_onehand_quick",
+      "upper_body": true,
+      "speed": 1.0
+    },
+    {
+      "op": "sound",
+      "when": "cast",
+      "id": "careerchronicle:skill.cast.fire"
+    },
+    {
+      "op": "particles",
+      "when": "cast",
+      "id": "minecraft:flame",
+      "count": 12,
+      "spread": 0.6
+    },
+    {
+      "op": "shake",
+      "when": "cast",
+      "strength": 0.22,
+      "ticks": 4
+    },
+    {
+      "op": "hit_layered",
+      "when": "hit",
+      "id": "careerchronicle:skill.hit.fire"
+    },
+    {
+      "op": "particles",
+      "when": "hit",
+      "id": "minecraft:flame",
+      "count": 8,
+      "spread": 0.4
+    },
+    {
+      "op": "hitstop",
+      "when": "hit",
+      "ticks": 3
+    },
+    {
+      "op": "camera_punch",
+      "when": "hit",
+      "strength": 0.4,
+      "direction": "hit"
+    }
   ]
 }

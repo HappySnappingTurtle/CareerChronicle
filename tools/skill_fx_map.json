@@ -1,0 +1,665 @@
+{
+  "reserved_sounds": [
+    "careerchronicle:skill.cast.arcane",
+    "careerchronicle:skill.cast.nature"
+  ],
+  "skills": [
+    {
+      "skill_id": "careerchronicle:absolute_zero",
+      "family": "frost",
+      "source": "tag:ice",
+      "cast_sound": "careerchronicle:skill.cast.frost",
+      "hit_sound": "careerchronicle:skill.hit.frost",
+      "cast_particle": "minecraft:snowflake",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:aegis_smash",
+      "family": "defense",
+      "source": "tag:defense",
+      "cast_sound": "careerchronicle:skill.cast.shield",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:enchant",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:ashen_bulwark",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:assassin_mark",
+      "family": "stealth",
+      "source": "tag:stealth",
+      "cast_sound": "careerchronicle:skill.cast.shadow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:smoke",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:blade_flurry",
+      "family": "stealth",
+      "source": "tag:stealth",
+      "cast_sound": "careerchronicle:skill.cast.shadow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:smoke",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:blazing_charge",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:blessing",
+      "family": "holy",
+      "source": "tag:holy",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:blizzard",
+      "family": "frost",
+      "source": "tag:ice",
+      "cast_sound": "careerchronicle:skill.cast.frost",
+      "hit_sound": "careerchronicle:skill.hit.frost",
+      "cast_particle": "minecraft:snowflake",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:bone_spike",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:charged_shot",
+      "family": "bow",
+      "source": "tag:bow",
+      "cast_sound": "careerchronicle:skill.cast.arrow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:consecrated_slam",
+      "family": "holy",
+      "source": "tag:holy",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:crystal_sanctuary",
+      "family": "frost",
+      "source": "tag:ice",
+      "cast_sound": "careerchronicle:skill.cast.frost",
+      "hit_sound": "careerchronicle:skill.hit.frost",
+      "cast_particle": "minecraft:snowflake",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:death_blossom",
+      "family": "stealth",
+      "source": "tag:stealth",
+      "cast_sound": "careerchronicle:skill.cast.shadow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:smoke",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:death_coil",
+      "family": "dark",
+      "source": "class:necromancer",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:death_domain",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:death_strike",
+      "family": "dark",
+      "source": "fusion:necromancer_warrior",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:eagle_eye",
+      "family": "bow",
+      "source": "class:archer",
+      "cast_sound": "careerchronicle:skill.cast.arrow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:ember_burst",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:fireball",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:flame_arrow",
+      "family": "fire",
+      "source": "fusion:fire_mage_archer",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:flame_step",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:flame_ward",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:fortified_bulwark",
+      "family": "defense",
+      "source": "tag:defense",
+      "cast_sound": "careerchronicle:skill.cast.shield",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:enchant",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:frost_arrow",
+      "family": "frost",
+      "source": "fusion:ice_mage_archer",
+      "cast_sound": "careerchronicle:skill.cast.frost",
+      "hit_sound": "careerchronicle:skill.hit.frost",
+      "cast_particle": "minecraft:snowflake",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:frost_bolt",
+      "family": "frost",
+      "source": "tag:ice",
+      "cast_sound": "careerchronicle:skill.cast.frost",
+      "hit_sound": "careerchronicle:skill.hit.frost",
+      "cast_particle": "minecraft:snowflake",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:frozen_blade",
+      "family": "frost",
+      "source": "tag:ice",
+      "cast_sound": "careerchronicle:skill.cast.frost",
+      "hit_sound": "careerchronicle:skill.hit.frost",
+      "cast_particle": "minecraft:snowflake",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:frozen_domain",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:frozen_ground",
+      "family": "frost",
+      "source": "tag:ice",
+      "cast_sound": "careerchronicle:skill.cast.frost",
+      "hit_sound": "careerchronicle:skill.hit.frost",
+      "cast_particle": "minecraft:snowflake",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:frozen_soul",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:glacial_prison",
+      "family": "frost",
+      "source": "tag:ice",
+      "cast_sound": "careerchronicle:skill.cast.frost",
+      "hit_sound": "careerchronicle:skill.hit.frost",
+      "cast_particle": "minecraft:snowflake",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:ground_slam",
+      "family": "melee",
+      "source": "tag:melee",
+      "cast_sound": "careerchronicle:skill.cast.blade",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:guard_stance",
+      "family": "defense",
+      "source": "tag:defense",
+      "cast_sound": "careerchronicle:skill.cast.shield",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:enchant",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:guiding_light_arrow",
+      "family": "holy",
+      "source": "tag:holy",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:hellfire",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:holy_nova",
+      "family": "holy",
+      "source": "tag:holy",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:impregnable_fortress",
+      "family": "defense",
+      "source": "tag:defense",
+      "cast_sound": "careerchronicle:skill.cast.shield",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:enchant",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:inferno_focus",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:iron_vanguard",
+      "family": "melee",
+      "source": "tag:melee",
+      "cast_sound": "careerchronicle:skill.cast.blade",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:legion_of_the_dead",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:lich_ascension",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:lich_form",
+      "family": "dark",
+      "source": "class:necromancer",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:lunge_strike",
+      "family": "melee",
+      "source": "tag:melee",
+      "cast_sound": "careerchronicle:skill.cast.blade",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:mend",
+      "family": "holy",
+      "source": "tag:heal",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:meteor_rite",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:permafrost_wall",
+      "family": "frost",
+      "source": "tag:ice",
+      "cast_sound": "careerchronicle:skill.cast.frost",
+      "hit_sound": "careerchronicle:skill.hit.frost",
+      "cast_particle": "minecraft:snowflake",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:phantom_arrow",
+      "family": "stealth",
+      "source": "tag:stealth",
+      "cast_sound": "careerchronicle:skill.cast.shadow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:smoke",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:piercing_volley",
+      "family": "bow",
+      "source": "tag:bow",
+      "cast_sound": "careerchronicle:skill.cast.arrow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:provoke",
+      "family": "defense",
+      "source": "class:guardian",
+      "cast_sound": "careerchronicle:skill.cast.shield",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:enchant",
+      "manual_override": true
+    },
+    {
+      "skill_id": "careerchronicle:runic_ward",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:sacred_shield",
+      "family": "holy",
+      "source": "tag:holy",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:sanctuary_descent",
+      "family": "holy",
+      "source": "tag:holy",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:scatter_shot",
+      "family": "bow",
+      "source": "tag:bow",
+      "cast_sound": "careerchronicle:skill.cast.arrow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:sentinel_volley",
+      "family": "defense",
+      "source": "tag:defense",
+      "cast_sound": "careerchronicle:skill.cast.shield",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:enchant",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:seraphic_grace",
+      "family": "holy",
+      "source": "tag:holy",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:shadow_flame",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:shadow_guard",
+      "family": "stealth",
+      "source": "tag:stealth",
+      "cast_sound": "careerchronicle:skill.cast.shadow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:smoke",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:shadow_strike",
+      "family": "stealth",
+      "source": "class:rogue",
+      "cast_sound": "careerchronicle:skill.cast.shadow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:smoke",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:shield_breaker",
+      "family": "defense",
+      "source": "tag:defense",
+      "cast_sound": "careerchronicle:skill.cast.shield",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:enchant",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:shield_wall",
+      "family": "defense",
+      "source": "tag:defense",
+      "cast_sound": "careerchronicle:skill.cast.shield",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:enchant",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:silent_prayer",
+      "family": "holy",
+      "source": "tag:holy",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:smoke_bomb",
+      "family": "stealth",
+      "source": "class:rogue",
+      "cast_sound": "careerchronicle:skill.cast.shadow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:smoke",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:snare_shot",
+      "family": "bow",
+      "source": "tag:bow",
+      "cast_sound": "careerchronicle:skill.cast.arrow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:soul_drain",
+      "family": "dark",
+      "source": "class:necromancer",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:soul_reaper",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:spectral_arrow",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:storm_marksman",
+      "family": "bow",
+      "source": "tag:bow",
+      "cast_sound": "careerchronicle:skill.cast.arrow",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:sunfire_aegis",
+      "family": "holy",
+      "source": "tag:holy",
+      "cast_sound": "careerchronicle:skill.cast.holy",
+      "hit_sound": "careerchronicle:skill.hit.holy",
+      "cast_particle": "minecraft:end_rod",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:surprise_assault",
+      "family": "melee",
+      "source": "tag:melee",
+      "cast_sound": "careerchronicle:skill.cast.blade",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:thermal_shock",
+      "family": "fire",
+      "source": "tag:fire",
+      "cast_sound": "careerchronicle:skill.cast.fire",
+      "hit_sound": "careerchronicle:skill.hit.fire",
+      "cast_particle": "minecraft:flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:twilight_mend",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:undead_shield",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:unyielding_colossus",
+      "family": "melee",
+      "source": "tag:melee",
+      "cast_sound": "careerchronicle:skill.cast.blade",
+      "hit_sound": "careerchronicle:skill.hit.physical",
+      "cast_particle": "minecraft:crit",
+      "manual_override": false
+    },
+    {
+      "skill_id": "careerchronicle:withering_strike",
+      "family": "dark",
+      "source": "tag:dark",
+      "cast_sound": "careerchronicle:skill.cast.dark",
+      "hit_sound": "careerchronicle:skill.hit.dark",
+      "cast_particle": "minecraft:soul_fire_flame",
+      "manual_override": false
+    }
+  ]
+}

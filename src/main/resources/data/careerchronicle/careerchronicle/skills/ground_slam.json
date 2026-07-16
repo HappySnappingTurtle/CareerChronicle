@@ -37,5 +37,59 @@
       "strength": 0.35,
       "direction": "away"
     }
+  ],
+  "fx": [
+    {
+      "op": "anim",
+      "when": "cast",
+      "id": "careerchronicle:cast_stomp",
+      "upper_body": false,
+      "speed": 1.0
+    },
+    {
+      "op": "sound",
+      "when": "cast",
+      "id": "careerchronicle:skill.cast.blade"
+    },
+    {
+      "op": "particles",
+      "when": "cast",
+      "id": "minecraft:crit",
+      "count": 12,
+      "spread": 0.6
+    },
+    {
+      "op": "shake",
+      "when": "cast",
+      "strength": 0.22,
+      "ticks": 4
+    },
+    {
+      "op": "particles",
+      "when": "cast",
+      "id": "minecraft:cloud",
+      "count": 20,
+      "spread": 0.9,
+      "delay_ticks": 7
+    },
+    {
+      "op": "shake",
+      "when": "cast",
+      "strength": 0.35,
+      "ticks": 5,
+      "delay_ticks": 7
+    },
+    {
+      "op": "sound",
+      "when": "hit",
+      "id": "careerchronicle:skill.hit.physical"
+    },
+    {
+      "op": "particles",
+      "when": "hit",
+      "id": "minecraft:crit",
+      "count": 8,
+      "spread": 0.4
+    }
   ]
 }

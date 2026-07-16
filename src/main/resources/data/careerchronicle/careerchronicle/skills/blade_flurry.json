@@ -25,5 +25,37 @@
       "per_level": 0.5,
       "damage_type": "player_attack"
     }
+  ],
+  "fx": [
+    {
+      "op": "sound",
+      "when": "cast",
+      "id": "careerchronicle:skill.cast.shadow"
+    },
+    {
+      "op": "particles",
+      "when": "cast",
+      "id": "minecraft:smoke",
+      "count": 12,
+      "spread": 0.6
+    },
+    {
+      "op": "shake",
+      "when": "cast",
+      "strength": 0.22,
+      "ticks": 4
+    },
+    {
+      "op": "sound",
+      "when": "hit",
+      "id": "careerchronicle:skill.hit.physical"
+    },
+    {
+      "op": "particles",
+      "when": "hit",
+      "id": "minecraft:smoke",
+      "count": 8,
+      "spread": 0.4
+    }
   ]
 }

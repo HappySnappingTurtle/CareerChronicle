@@ -16,6 +16,12 @@ base {
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
+// 0.4-09a (d): enable ForgeGradle's Jar-in-Jar system so player-animation-lib can be
+// embedded in our own jar (users installing CareerChronicle don't need to separately
+// install it). Must be called before the `minecraft {}` block per Forge's jarJar docs.
+jarJar.enable()
+
 minecraft {
     // The mappings can be changed at any time and must be in the following format.
     // Channel:   Version:
@@ -84,6 +90,12 @@ minecraft {
         client {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
+            if (project.hasProperty('autotest')) {
+                property 'careerchronicle.autotest', 'true'
+                if (project.hasProperty('scenario')) {
+                    property 'careerchronicle.autotest.scenario', project.getProperty('scenario')
+                }
+            }
         }
 
         server {
@@ -105,6 +117,7 @@ minecraft {
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
+
     }
 }
 

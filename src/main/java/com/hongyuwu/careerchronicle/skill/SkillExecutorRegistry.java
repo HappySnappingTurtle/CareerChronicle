@@ -60,7 +60,17 @@ public final class SkillExecutorRegistry {
     }
 
     public static boolean exists(ResourceLocation executorId) {
-        return KNOWN_EXECUTORS.contains(executorId);
+        // Bug9 fix: most skills (post-0.4-05a FX pipeline) run through the
+        // effect-component interpreter and legitimately have a null executor()
+        // -- only the handful of legacy special-case skills listed in
+        // KNOWN_EXECUTORS use this registry at all. Set.of(...) throws NPE on
+        // contains(null), which used to propagate out of CareerTestCommand's
+        // "Test each executor exists" loop (it iterates *all* skills, not just
+        // executor-based ones) and abort the test mid-way -- see
+        // CareerTestCommand.runFullTest(), which historically had no
+        // backup/restore around its destructive resets, so a crash here left
+        // whatever partial state the test was in as the player's permanent data.
+        return executorId != null && KNOWN_EXECUTORS.contains(executorId);
     }
 
     public static boolean execute(ServerPlayer player, ICareerData data, SkillDef skill) {

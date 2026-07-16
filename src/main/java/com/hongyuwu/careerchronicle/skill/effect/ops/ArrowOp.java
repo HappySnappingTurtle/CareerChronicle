@@ -1,7 +1,6 @@
 package com.hongyuwu.careerchronicle.skill.effect.ops;
 
 import com.google.gson.JsonObject;
-import com.hongyuwu.careerchronicle.network.NetworkHandler;
 import com.hongyuwu.careerchronicle.skill.CareerArrowTags;
 import com.hongyuwu.careerchronicle.skill.SkillCastHelper;
 import com.hongyuwu.careerchronicle.skill.effect.EffectContext;
@@ -45,9 +44,8 @@ public final class ArrowOp implements EffectOp {
             arrow.shoot(direction.x, direction.y, direction.z, speed, 0.16F);
             arrow.setCritArrow(true);
             ctx.level().addFreshEntity(arrow);
-
-            Vec3 fxTarget = origin.add(arrow.getDeltaMovement().normalize().scale(2.7));
-            NetworkHandler.playSkillFx(ctx.caster(), ctx.skillId(), "cast", origin, fxTarget);
+            // cast fx dispatched once per cast by FxDispatcher.dispatchCast in
+            // CareerSkillService, not per arrow here (0.4-05a H1 dedup).
         }
     }
 }

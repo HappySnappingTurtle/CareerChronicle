@@ -1,0 +1,50 @@
+{
+  "id": "careerchronicle:attack_staff",
+  "_comment": "阶段3-任务6 rev2 (基于《阶段3-骨骼旋转坐标系统参考文档》重新校准, 原rev1的-95度peak实测从未真正生效): 双手持杆前戳(含权杖). 14tick. 幅度压到10-55度安全区间. 预备0-4t双手高低握杆+躯干右转 -> 前戳4-7t双臂同向前推+左腿前弓步 -> 收势7-14t收杖回戒备位.",
+  "duration_ticks": 14,
+  "loop": false,
+  "tracks": {
+    "body": [
+      { "tick": 0, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "yaw": 18, "easing": "ease_out_expo" },
+      { "tick": 7, "yaw": -12, "easing": "ease_in_out_sine" },
+      { "tick": 14, "yaw": 0, "easing": "linear" }
+    ],
+    "right_arm": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "pitch": -40, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": -55, "easing": "ease_out_expo" },
+      { "tick": 14, "pitch": 0, "easing": "linear" }
+    ],
+    "left_arm": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "pitch": -25, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": -40, "easing": "ease_out_expo" },
+      { "tick": 14, "pitch": 0, "easing": "linear" }
+    ],
+    "right_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "pitch": 0, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": 8, "easing": "ease_in_out_sine" },
+      { "tick": 14, "pitch": 0, "easing": "linear" }
+    ],
+    "right_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "pitch": 16, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": 4, "easing": "ease_in_out_sine" },
+      { "tick": 14, "pitch": 0, "easing": "linear" }
+    ],
+    "left_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "pitch": -3, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": -20, "easing": "ease_in_out_sine" },
+      { "tick": 14, "pitch": 0, "easing": "linear" }
+    ],
+    "left_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "pitch": 6, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": 22, "easing": "ease_in_out_sine" },
+      { "tick": 14, "pitch": 0, "easing": "linear" }
+    ]
+  }
+}

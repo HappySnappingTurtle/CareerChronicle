@@ -35,5 +35,37 @@
       "op": "ignite",
       "seconds": 3
     }
+  ],
+  "fx": [
+    {
+      "op": "sound",
+      "when": "cast",
+      "id": "careerchronicle:skill.cast.fire"
+    },
+    {
+      "op": "particles",
+      "when": "cast",
+      "id": "minecraft:flame",
+      "count": 12,
+      "spread": 0.6
+    },
+    {
+      "op": "shake",
+      "when": "cast",
+      "strength": 0.32,
+      "ticks": 6
+    },
+    {
+      "op": "sound",
+      "when": "hit",
+      "id": "careerchronicle:skill.hit.fire"
+    },
+    {
+      "op": "particles",
+      "when": "hit",
+      "id": "minecraft:flame",
+      "count": 8,
+      "spread": 0.4
+    }
   ]
 }

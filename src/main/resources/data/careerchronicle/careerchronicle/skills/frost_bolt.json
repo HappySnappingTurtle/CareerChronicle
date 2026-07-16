@@ -22,5 +22,26 @@
       "per_level_damage": 0.5,
       "burn_seconds": 0
     }
+  ],
+  "fx_template": "frost_active",
+  "fx": [
+    {
+      "op": "shake",
+      "when": "cast",
+      "strength": 0.22,
+      "ticks": 4
+    },
+    {
+      "op": "sound",
+      "when": "hit",
+      "id": "careerchronicle:skill.hit.frost"
+    },
+    {
+      "op": "particles",
+      "when": "hit",
+      "id": "minecraft:snowflake",
+      "count": 8,
+      "spread": 0.4
+    }
   ]
 }

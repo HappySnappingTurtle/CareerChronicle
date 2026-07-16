@@ -44,5 +44,37 @@
       "per_level": 0.5,
       "target": "self"
     }
+  ],
+  "fx": [
+    {
+      "op": "sound",
+      "when": "cast",
+      "id": "careerchronicle:skill.cast.dark"
+    },
+    {
+      "op": "particles",
+      "when": "cast",
+      "id": "minecraft:soul_fire_flame",
+      "count": 12,
+      "spread": 0.6
+    },
+    {
+      "op": "shake",
+      "when": "cast",
+      "strength": 0.22,
+      "ticks": 4
+    },
+    {
+      "op": "sound",
+      "when": "hit",
+      "id": "careerchronicle:skill.hit.dark"
+    },
+    {
+      "op": "particles",
+      "when": "hit",
+      "id": "minecraft:soul_fire_flame",
+      "count": 8,
+      "spread": 0.4
+    }
   ]
 }

@@ -2,8 +2,6 @@ package com.hongyuwu.careerchronicle.client;
 
 import com.hongyuwu.careerchronicle.player.CareerDataSnapshot;
 import net.minecraft.client.Minecraft;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.phys.Vec3;
 
 public final class ClientPacketHandlers {
     private ClientPacketHandlers() {
@@ -21,9 +19,5 @@ public final class ClientPacketHandlers {
 
     public static void openCareerScreen() {
         CareerClientScreens.openCareerScreen();
-    }
-
-    public static void playSkillFx(ResourceLocation skillId, String fxType, Vec3 origin, Vec3 target, double particleMultiplier) {
-        Minecraft.getInstance().execute(() -> SkillFxRenderer.play(skillId, fxType, origin, target, particleMultiplier));
     }
 }

@@ -2,6 +2,7 @@ package com.hongyuwu.careerchronicle.skill;
 
 import com.hongyuwu.careerchronicle.data.CareerRegistry;
 import com.hongyuwu.careerchronicle.data.SkillDef;
+import com.hongyuwu.careerchronicle.network.FxDispatcher;
 import com.hongyuwu.careerchronicle.player.CareerDataAccess;
 import com.hongyuwu.careerchronicle.player.ICareerData;
 import com.hongyuwu.careerchronicle.skill.effect.EffectContext;
@@ -80,6 +81,12 @@ public final class CareerSkillService {
             int skillLevel = SkillLevelService.levelOf(data, skill);
             EffectContext ctx = EffectContext.castContext(player, skillLevel, skill.id());
             executed = EffectPipeline.execute(ctx, skill.effects());
+            if (executed) {
+                // Only the component path gets the new declarative cast fx: legacy
+                // executor skills already send their own "cast" packet internally
+                // (SkillExecutorRegistry), so dispatching here too would double-fire it.
+                FxDispatcher.dispatchCast(player, skill);
+            }
         } else {
             executed = SkillExecutorRegistry.execute(player, data, skill);
         }

@@ -14,14 +14,19 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterClientCommandsEvent;
 import net.minecraftforge.client.event.RenderGuiOverlayEvent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.client.gui.overlay.VanillaGuiOverlay;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.level.LevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 public final class CareerClientEvents {
     private static final int CAREER_HUD_MARGIN = 4;
@@ -69,6 +74,41 @@ public final class CareerClientEvents {
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerEntityRenderer(CareerEntities.CAREER_PROJECTILE.get(), CareerProjectileRenderer::new);
         }
+
+        @SubscribeEvent
+        public static void onRegisterLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            // 自定义骨骼引擎 stage 1: registers CustomLegPlayerModel under a brand-new
+            // ModelLayerLocation (never ModelLayers.PLAYER itself -- see CustomLegModelSwap's
+            // javadoc for why that would crash the game at startup).
+            CustomLegModelSwap.registerLayerDefinitions(event);
+        }
+
+        @SubscribeEvent
+        public static void onAddLayers(EntityRenderersEvent.AddLayers event) {
+            // 自定义骨骼引擎 stage 1: reflectively swaps the baked CustomLegPlayerModel into the
+            // running PlayerRenderer instances. Fails safe -- see CustomLegModelSwap.trySwap.
+            CustomLegModelSwap.swapPlayerModels(event);
+        }
+
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            event.enqueueWork(FxOpRegistry::registerBuiltins);
+            // 0.4-09a: pick the anim driver once mods have finished loading, so EF/FirstPersonMod
+            // detection (AnimationDriverRegistry §三.2) sees the final mod list. 阶段3-任务4: no
+            // driver-specific slot registration needed anymore -- CustomSkeletonAnimationDriver
+            // has no external-library init step (unlike the deleted PlayerAnimatorDriver, which
+            // needed a one-time player-animation-lib slot registration here).
+            event.enqueueWork(() -> AnimationDriverRegistry.init(ModList.get()::isLoaded));
+        }
+
+        @SubscribeEvent
+        public static void onRegisterReloadListeners(
+                net.minecraftforge.client.event.RegisterClientReloadListenersEvent event) {
+            // 阶段3-任务4: wires AnimationClipRegistry into Minecraft's normal client resource
+            // reload cycle -- runs both at initial startup and on every /reload, same as vanilla's
+            // own model/texture/sound reload listeners registered this same way.
+            AnimationClipRegistry.registerReloadListener(event);
+        }
     }
 
     @Mod.EventBusSubscriber(modid = CareerChronicleMod.MOD_ID, value = Dist.CLIENT)
@@ -77,11 +117,63 @@ public final class CareerClientEvents {
         }
 
         @SubscribeEvent
+        public static void onRegisterClientCommands(RegisterClientCommandsEvent event) {
+            // 自定义骨骼引擎 stage 1 debug tool (temporary, replaced by the real animation engine
+            // in a later stage): /careershin set <degrees> / /careershin reset.
+            CustomLegModelSwap.registerDebugCommand(event.getDispatcher());
+        }
+
+        @SubscribeEvent
+        public static void onLoggingOut(ClientPlayerNetworkEvent.LoggingOut event) {
+            // 引擎审计修复 任务A / A2+A5 (表现引擎全面审计报告_2026-07-15.md): drop every
+            // in-flight custom animation and delayed fx the instant the local player logs out --
+            // otherwise the same player UUID reconnecting later would find stale registry entries
+            // (A2) and a delayed fx task would eventually fire against the ClientLevel being left
+            // (A5).
+            CustomAnimationPlayers.clear();
+            DelayedFxScheduler.clear();
+        }
+
+        @SubscribeEvent
+        public static void onLevelUnload(LevelEvent.Unload event) {
+            // Same cleanup as onLoggingOut, for the "world/dimension actually unloads" case
+            // (covers both leaving a world to the title screen and changing dimension) -- this
+            // class is registered Dist.CLIENT-only (see the enclosing @Mod.EventBusSubscriber), so
+            // this handler only ever runs for the client-side ClientLevel unload, never a
+            // dedicated server's ServerLevel.
+            CustomAnimationPlayers.clear();
+            DelayedFxScheduler.clear();
+        }
+
+        @SubscribeEvent
+        public static void onRenderPlayerPre(net.minecraftforge.client.event.RenderPlayerEvent.Pre event) {
+            // 阶段3-任务6: this event fires *before* setupAnim() (see CustomLegPlayerModel.setupAnim's
+            // doc), so it can no longer write vanilla bones -- only stamp partialTick for setupAnim()
+            // to consume, and handle the shin debug-visibility pants-hide (shin isn't vanilla-owned).
+            CustomLegModelSwap.onRenderPlayerPre(event);
+        }
+
+        @SubscribeEvent
         public static void onCameraAngles(net.minecraftforge.client.event.ViewportEvent.ComputeCameraAngles event) {
+            float partial = (float) event.getPartialTick();
+            if (HitstopManager.isActive()) {
+                // Hitstop takes over the camera entirely for its duration (0.4-07 §2.1):
+                // stacking shake/punch on top of a "frozen" view would defeat the point
+                // of the freeze, so it deliberately does not add to shake/punch below.
+                HitstopManager.captureIfNeeded(event.getYaw(), event.getPitch(), event.getRoll());
+                event.setYaw(HitstopManager.frozenYaw());
+                event.setPitch(HitstopManager.frozenPitch());
+                event.setRoll(HitstopManager.frozenRoll());
+                return;
+            }
             if (CameraShakeManager.isShaking()) {
-                float partial = (float) event.getPartialTick();
                 event.setYaw(event.getYaw() + CameraShakeManager.getYawOffset(partial));
                 event.setPitch(event.getPitch() + CameraShakeManager.getPitchOffset(partial));
+            }
+            if (CameraPunchManager.isActive()) {
+                event.setYaw(event.getYaw() + CameraPunchManager.getYawOffset(partial));
+                event.setPitch(event.getPitch() + CameraPunchManager.getPitchOffset(partial));
+                event.setRoll(event.getRoll() + CameraPunchManager.getRollOffset(partial));
             }
         }
 
@@ -92,7 +184,11 @@ public final class CareerClientEvents {
             }
             ClientCareerData.tick();
             CameraShakeManager.tick();
+            HitstopManager.tick();
+            CameraPunchManager.tick();
             HitFlashOverlay.tick();
+            DelayedFxScheduler.tick();
+            CustomAnimationPlayers.tickAll();
             while (OPEN_CAREER_SCREEN.consumeClick()) {
                 CareerClientScreens.openEntryScreen();
             }

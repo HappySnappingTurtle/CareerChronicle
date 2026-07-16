@@ -3,8 +3,6 @@ package com.hongyuwu.careerchronicle.network;
 import com.hongyuwu.careerchronicle.CareerChronicleMod;
 import com.hongyuwu.careerchronicle.player.CareerDataSnapshot;
 import java.lang.reflect.InvocationTargetException;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 
@@ -24,16 +22,6 @@ final class ClientPacketDispatch {
     static void openCareerScreen() {
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> invoke("openCareerScreen",
                 new Class<?>[0]));
-    }
-
-    static void playSkillFx(ResourceLocation skillId, String fxType, Vec3 origin, Vec3 target, double particleMultiplier) {
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> invoke("playSkillFx",
-                new Class<?>[]{ResourceLocation.class, String.class, Vec3.class, Vec3.class, double.class},
-                skillId,
-                fxType,
-                origin,
-                target,
-                particleMultiplier));
     }
 
     private static void invoke(String methodName, Class<?>[] parameterTypes, Object... args) {

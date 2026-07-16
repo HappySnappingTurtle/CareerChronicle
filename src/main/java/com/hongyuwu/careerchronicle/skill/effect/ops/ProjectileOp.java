@@ -2,7 +2,6 @@ package com.hongyuwu.careerchronicle.skill.effect.ops;
 
 import com.google.gson.JsonObject;
 import com.hongyuwu.careerchronicle.CareerChronicleMod;
-import com.hongyuwu.careerchronicle.network.NetworkHandler;
 import com.hongyuwu.careerchronicle.skill.SkillCastHelper;
 import com.hongyuwu.careerchronicle.skill.effect.EffectContext;
 import com.hongyuwu.careerchronicle.skill.effect.EffectOp;
@@ -32,9 +31,9 @@ public final class ProjectileOp implements EffectOp {
             projectile.setPos(origin.x, origin.y, origin.z);
             projectile.shoot(direction.x, direction.y, direction.z, speed, 0.08F);
             ctx.level().addFreshEntity(projectile);
-
-            NetworkHandler.playSkillFx(ctx.caster(), ctx.skillId(), "cast",
-                    origin, origin.add(direction.scale(2.4)));
+            // cast fx (sound/particle/shake) is dispatched once per cast by
+            // FxDispatcher.dispatchCast in CareerSkillService, not per projectile
+            // here — avoids double-firing on multi-projectile skills (0.4-05a H1).
         }
     }
 }

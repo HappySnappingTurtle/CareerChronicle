@@ -1,7 +1,6 @@
 package com.hongyuwu.careerchronicle.network;
 
 import com.hongyuwu.careerchronicle.CareerChronicleMod;
-import com.hongyuwu.careerchronicle.config.ModConfig;
 import com.hongyuwu.careerchronicle.player.CareerDataSnapshot;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
@@ -13,7 +12,10 @@ import net.minecraftforge.network.simple.SimpleChannel;
 import java.util.Optional;
 
 public final class NetworkHandler {
-    private static final String PROTOCOL_VERSION = "0.1.0";
+    // 0.2.0: S2CPlaySkillFxPacket moved to the v2 declarative-ops wire format
+    // (0.4-05a). Strict-equals handshake means old/new jars simply refuse to
+    // connect rather than silently misdecoding each other's fx packets.
+    private static final String PROTOCOL_VERSION = "0.2.0";
 
     public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
             ResourceLocation.fromNamespaceAndPath(CareerChronicleMod.MOD_ID, "main"),
@@ -101,22 +103,50 @@ public final class NetworkHandler {
     }
 
     public static void sendCareerSnapshot(ServerPlayer player, CareerDataSnapshot snapshot) {
-        CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new S2CCareerSnapshotPacket(snapshot));
+        sendToPlayer(player, () -> new S2CCareerSnapshotPacket(snapshot));
     }
 
     public static void openCareerScreen(ServerPlayer player) {
-        CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new S2COpenCareerScreenPacket());
+        sendToPlayer(player, S2COpenCareerScreenPacket::new);
     }
 
+    /**
+     * 0.4-07: discovered via GameTest — {@code helper.makeMockServerPlayerInLevel()}
+     * goes through the real {@code PlayerList.placeNewPlayer(...)}, which fires the
+     * full player-login event chain (including our own {@code onPlayerLoggedIn} ->
+     * {@code CareerDataAccess.sync}) against a player whose {@code Connection} object
+     * is real but was never attached to an actual Netty channel. Sending to such a
+     * player throws synchronously from deep inside Forge's packet-direction
+     * resolution; this guard (mirroring {@code FxDispatcher.hasLiveConnection})
+     * makes every outbound send in this class resilient to that, in production as
+     * much as in tests -- a player with no live connection has nothing to receive
+     * these packets anyway.
+     */
+    private static void sendToPlayer(ServerPlayer player, java.util.function.Supplier<Object> packet) {
+        if (!hasLiveConnection(player)) {
+            return;
+        }
+        try {
+            CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), packet.get());
+        } catch (RuntimeException exception) {
+            CareerChronicleMod.LOGGER.debug("Skipped packet send to {}: {}", player.getGameProfile().getName(), exception.toString());
+        }
+    }
+
+    static boolean hasLiveConnection(ServerPlayer player) {
+        return player.connection != null
+                && player.connection.connection != null
+                && player.connection.connection.channel() != null;
+    }
+
+    /**
+     * Unified fx send entry point. All existing call sites (legacy skill
+     * executors, projectile/arrow hit handlers) keep this exact signature and
+     * transparently gain casterId + declarative fxOps via FxDispatcher — see
+     * 0.4-05a design doc §3.1.
+     */
     public static void playSkillFx(ServerPlayer player, ResourceLocation skillId, String fxType, Vec3 origin, Vec3 target) {
-        double particleMultiplier = ModConfig.SKILL_PARTICLE_MULTIPLIER.get();
-        CHANNEL.send(PacketDistributor.NEAR.with(PacketDistributor.TargetPoint.p(
-                origin.x,
-                origin.y,
-                origin.z,
-                32.0D,
-                player.level().dimension()
-        )), new S2CPlaySkillFxPacket(skillId, fxType, origin, target, particleMultiplier));
+        FxDispatcher.send(player, skillId, fxType, origin, target);
     }
 
     private static int nextPacketId() {

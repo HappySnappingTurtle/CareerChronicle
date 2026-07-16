@@ -1,0 +1,50 @@
+{
+  "id": "careerchronicle:attack_axe",
+  "_comment": "阶段3-任务6 rev2 (基于《阶段3-骨骼旋转坐标系统参考文档》重新校准, 原rev1的-170度peak实测从未真正生效, 修复setupAnim()渲染时机bug后会导致双臂飞到身后严重失真): 过顶劈砍. 18tick,全套最重. 幅度压到15-60度安全区间(仍是全套最大动作, 保留'最重武器'的定位). 预备0-6t慢速举斧过顶 -> 劈下6-9t猛力下劈 -> 收势9-18t很慢.",
+  "duration_ticks": 18,
+  "loop": false,
+  "tracks": {
+    "body": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": -8, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 18, "easing": "ease_in_out_sine" },
+      { "tick": 18, "pitch": 0, "easing": "linear" }
+    ],
+    "right_arm": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": -60, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": -20, "easing": "ease_out_expo" },
+      { "tick": 18, "pitch": 0, "easing": "linear" }
+    ],
+    "left_arm": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": -55, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": -15, "easing": "ease_out_expo" },
+      { "tick": 18, "pitch": 0, "easing": "linear" }
+    ],
+    "right_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": -12, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 5, "easing": "ease_in_out_sine" },
+      { "tick": 18, "pitch": 0, "easing": "linear" }
+    ],
+    "right_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": 20, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 2, "easing": "ease_in_out_sine" },
+      { "tick": 18, "pitch": 0, "easing": "linear" }
+    ],
+    "left_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": -8, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": -15, "easing": "ease_in_out_sine" },
+      { "tick": 18, "pitch": 0, "easing": "linear" }
+    ],
+    "left_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 6, "pitch": 12, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 28, "easing": "ease_in_out_sine" },
+      { "tick": 18, "pitch": 0, "easing": "linear" }
+    ]
+  }
+}

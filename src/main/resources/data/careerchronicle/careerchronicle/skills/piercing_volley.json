@@ -23,5 +23,37 @@
       "spread": 10.0,
       "pierce": true
     }
+  ],
+  "fx": [
+    {
+      "op": "sound",
+      "when": "cast",
+      "id": "careerchronicle:skill.cast.arrow"
+    },
+    {
+      "op": "particles",
+      "when": "cast",
+      "id": "minecraft:crit",
+      "count": 12,
+      "spread": 0.6
+    },
+    {
+      "op": "shake",
+      "when": "cast",
+      "strength": 0.32,
+      "ticks": 6
+    },
+    {
+      "op": "sound",
+      "when": "hit",
+      "id": "careerchronicle:skill.hit.physical"
+    },
+    {
+      "op": "particles",
+      "when": "hit",
+      "id": "minecraft:crit",
+      "count": 8,
+      "spread": 0.4
+    }
   ]
 }

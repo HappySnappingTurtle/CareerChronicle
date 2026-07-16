@@ -58,7 +58,19 @@ public final class AutoTestController {
         finished = false;
 
         steps.clear();
-        AutoTestScenarios.buildFullFlowSteps(steps);
+        // Stage-1 leg-joint / 阶段3-任务5 cast-animation validation are separate, opt-in scenarios
+        // (-Dcareerchronicle.autotest.scenario=legjoint / castanim) so neither interferes with the
+        // existing full-flow regression scenario below.
+        String scenario = System.getProperty("careerchronicle.autotest.scenario");
+        if ("legjoint".equals(scenario)) {
+            AutoTestScenarios.buildLegJointStageOneSteps(steps);
+        } else if ("castanim".equals(scenario)) {
+            AutoTestScenarios.buildCastAnimStageFiveSteps(steps);
+        } else if ("legpitch".equals(scenario)) {
+            AutoTestScenarios.buildLegPitchDiagnosticSteps(steps);
+        } else {
+            AutoTestScenarios.buildFullFlowSteps(steps);
+        }
 
         running = true;
         log("=== Career Chronicle AutoTest Started ===");
@@ -77,6 +89,13 @@ public final class AutoTestController {
         log("=== AutoTest Stopped ===");
         writeSummary();
         CareerChronicleMod.LOGGER.info("[AutoTest] Stopped. {} results recorded.", results.size());
+        scheduleAutoQuit();
+    }
+
+    public void scheduleAutoQuit() {
+        if (AutoTestBootstrap.isEnabled()) {
+            AutoTestBootstrap.scheduleQuit();
+        }
     }
 
     public void tick() {

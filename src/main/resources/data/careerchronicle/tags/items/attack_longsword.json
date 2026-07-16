@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "careerchronicle:runic_blade",
+    "careerchronicle:iron_runic_blade",
+    "careerchronicle:diamond_runic_blade",
+    "careerchronicle:executioners_edge",
+    "minecraft:iron_sword",
+    "minecraft:diamond_sword",
+    "minecraft:netherite_sword"
+  ]
+}

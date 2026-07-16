@@ -1,0 +1,57 @@
+{
+  "id": "careerchronicle:attack_sigil",
+  "_comment": "阶段3-任务6 rev2 (基于《阶段3-骨骼旋转坐标系统参考文档》重新校准, 原rev1的-90度peak实测从未真正生效): 单手圣光前推. 10tick. 幅度压到10-50度安全区间. 预备0-3t右手收于胸口 -> 推出3-4t右掌平推到位, tick4-5停顿(圣光爆点) -> 收势5-10t.",
+  "duration_ticks": 10,
+  "loop": false,
+  "tracks": {
+    "body": [
+      { "tick": 0, "pitch": 0, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": 0, "yaw": 0, "easing": "ease_out_expo" },
+      { "tick": 4, "pitch": 6, "yaw": -8, "easing": "linear" },
+      { "tick": 5, "pitch": 6, "yaw": -8, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": 0, "yaw": 0, "easing": "linear" }
+    ],
+    "right_arm": [
+      { "tick": 0, "pitch": 0, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": -30, "yaw": -12, "easing": "ease_out_expo" },
+      { "tick": 4, "pitch": -50, "yaw": 0, "easing": "linear" },
+      { "tick": 5, "pitch": -50, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": 0, "yaw": 0, "easing": "linear" }
+    ],
+    "left_arm": [
+      { "tick": 0, "pitch": 0, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": 0, "yaw": 10, "easing": "ease_out_expo" },
+      { "tick": 4, "pitch": 0, "yaw": 10, "easing": "linear" },
+      { "tick": 5, "pitch": 0, "yaw": 10, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": 0, "yaw": 0, "easing": "linear" }
+    ],
+    "right_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": 0, "easing": "ease_out_expo" },
+      { "tick": 4, "pitch": 8, "easing": "linear" },
+      { "tick": 5, "pitch": 8, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": 0, "easing": "linear" }
+    ],
+    "right_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": 14, "easing": "ease_out_expo" },
+      { "tick": 4, "pitch": 4, "easing": "linear" },
+      { "tick": 5, "pitch": 4, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": 0, "easing": "linear" }
+    ],
+    "left_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": -2, "easing": "ease_out_expo" },
+      { "tick": 4, "pitch": -12, "easing": "linear" },
+      { "tick": 5, "pitch": -12, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": 0, "easing": "linear" }
+    ],
+    "left_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 3, "pitch": 8, "easing": "ease_out_expo" },
+      { "tick": 4, "pitch": 16, "easing": "linear" },
+      { "tick": 5, "pitch": 16, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": 0, "easing": "linear" }
+    ]
+  }
+}

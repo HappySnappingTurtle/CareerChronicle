@@ -1,0 +1,29 @@
+{
+  "id": "careerchronicle:cast_twohand_chant",
+  "_comment": "阶段3-任务5 rev2 (基于《阶段3-骨骼旋转坐标系统参考文档》重新设计, 原rev1的-150度peak实测从未真正生效, 修复setupAnim()渲染时机bug后-150度会让双臂飞到头顶上方严重失真): 双臂上举幅度压到50-55度安全区间(仍保留'举起祈祷'的设计意图), roll分量保留(左右臂内外旋方向相反, 不镜像). 绑定blessing. 上半身only.",
+  "duration_ticks": 18,
+  "loop": false,
+  "tracks": {
+    "right_arm": [
+      { "tick": 0, "pitch": 0, "roll": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "pitch": -10, "roll": -8, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": -50, "roll": -15, "easing": "ease_in_out_sine" },
+      { "tick": 14, "pitch": -55, "roll": -15, "easing": "ease_in_out_sine" },
+      { "tick": 18, "pitch": 0, "roll": 0, "easing": "linear" }
+    ],
+    "left_arm": [
+      { "tick": 0, "pitch": 0, "roll": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "pitch": -10, "roll": 8, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": -50, "roll": 15, "easing": "ease_in_out_sine" },
+      { "tick": 14, "pitch": -55, "roll": 15, "easing": "ease_in_out_sine" },
+      { "tick": 18, "pitch": 0, "roll": 0, "easing": "linear" }
+    ],
+    "body": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 4, "pitch": 5, "easing": "ease_in_out_sine" },
+      { "tick": 10, "pitch": -5, "easing": "ease_in_out_sine" },
+      { "tick": 14, "pitch": -5, "easing": "ease_in_out_sine" },
+      { "tick": 18, "pitch": 0, "easing": "linear" }
+    ]
+  }
+}

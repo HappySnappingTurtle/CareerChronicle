@@ -11,7 +11,22 @@ public final class CameraShakeManager {
 
     private CameraShakeManager() {}
 
+    /**
+     * 引擎审计修复 任务A / A3 (表现引擎全面审计报告_2026-07-15.md A3): rejects
+     * {@code durationTicks <= 0} up front. Previously a call with {@code intensity > 0} but
+     * {@code durationTicks <= 0} would still win the "stronger than current" check below and set
+     * {@code shakeIntensity} to a non-zero value while leaving {@code shakeDuration <= 0} --
+     * {@link #tick()}'s own {@code shakeDuration <= 0} early-return then means {@code shakeIntensity}
+     * is never reset back to 0 by anything, permanently "poisoning" the manager: every subsequent
+     * {@code trigger} call with an intensity not strictly greater than the poisoned value silently
+     * loses the "stronger than current" comparison and does nothing, for the rest of the client
+     * session. {@link ShakeFxOp}'s own {@code ticks} param defaults to 0 (matches this bug exactly
+     * whenever a skill's shake fx component data omits it) -- see that class's own fix.
+     */
     public static void trigger(float intensity, int durationTicks) {
+        if (durationTicks <= 0) {
+            return;
+        }
         if (intensity > shakeIntensity) {
             shakeIntensity = intensity;
             shakeDuration = durationTicks;
@@ -45,5 +60,13 @@ public final class CameraShakeManager {
 
     public static boolean isShaking() {
         return shakeDuration > 0;
+    }
+
+    /** Test-only: resets all static state so tests don't leak into each other (mirrors
+     * {@code CameraPunchManager.clearForTesting()}). */
+    static void clearForTesting() {
+        shakeIntensity = 0;
+        shakeDuration = 0;
+        shakeTimer = 0;
     }
 }

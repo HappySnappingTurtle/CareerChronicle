@@ -1,0 +1,50 @@
+{
+  "id": "careerchronicle:attack_blunt",
+  "_comment": "阶段3-任务6 rev2 (基于《阶段3-骨骼旋转坐标系统参考文档》重新校准, 原rev1的-70度peak实测从未真正生效): 持盾横抡. 16tick. 幅度压到15-45度安全区间. 左臂持盾全程保持防御位(基本不动). 预备0-5t右臂后拉外展+重心压右腿 -> 抡击5-8t右臂水平横抡+躯干甩腰+重心左移 -> 收势8-16t.",
+  "duration_ticks": 16,
+  "loop": false,
+  "tracks": {
+    "body": [
+      { "tick": 0, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "yaw": 25, "easing": "ease_out_expo" },
+      { "tick": 8, "yaw": -20, "easing": "ease_in_out_sine" },
+      { "tick": 16, "yaw": 0, "easing": "linear" }
+    ],
+    "right_arm": [
+      { "tick": 0, "pitch": 0, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": -25, "yaw": 25, "easing": "ease_out_expo" },
+      { "tick": 8, "pitch": -8, "yaw": -15, "easing": "ease_in_out_sine" },
+      { "tick": 16, "pitch": 0, "yaw": 0, "easing": "linear" }
+    ],
+    "left_arm": [
+      { "tick": 0, "pitch": 0, "yaw": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": -45, "yaw": -8, "easing": "ease_out_expo" },
+      { "tick": 8, "pitch": -45, "yaw": -8, "easing": "ease_in_out_sine" },
+      { "tick": 16, "pitch": 0, "yaw": 0, "easing": "linear" }
+    ],
+    "right_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": 3, "easing": "ease_out_expo" },
+      { "tick": 8, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 16, "pitch": 0, "easing": "linear" }
+    ],
+    "right_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": 22, "easing": "ease_out_expo" },
+      { "tick": 8, "pitch": 5, "easing": "ease_in_out_sine" },
+      { "tick": 16, "pitch": 0, "easing": "linear" }
+    ],
+    "left_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": -2, "easing": "ease_out_expo" },
+      { "tick": 8, "pitch": -18, "easing": "ease_in_out_sine" },
+      { "tick": 16, "pitch": 0, "easing": "linear" }
+    ],
+    "left_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": 8, "easing": "ease_out_expo" },
+      { "tick": 8, "pitch": 18, "easing": "ease_in_out_sine" },
+      { "tick": 16, "pitch": 0, "easing": "linear" }
+    ]
+  }
+}

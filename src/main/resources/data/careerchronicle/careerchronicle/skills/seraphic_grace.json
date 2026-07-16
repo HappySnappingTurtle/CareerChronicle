@@ -33,5 +33,37 @@
       "per_level_duration": 20,
       "amplifier": 0
     }
+  ],
+  "fx": [
+    {
+      "op": "sound",
+      "when": "cast",
+      "id": "careerchronicle:skill.cast.holy"
+    },
+    {
+      "op": "particles",
+      "when": "cast",
+      "id": "minecraft:end_rod",
+      "count": 12,
+      "spread": 0.6
+    },
+    {
+      "op": "shake",
+      "when": "cast",
+      "strength": 0.22,
+      "ticks": 4
+    },
+    {
+      "op": "sound",
+      "when": "hit",
+      "id": "careerchronicle:skill.hit.holy"
+    },
+    {
+      "op": "particles",
+      "when": "hit",
+      "id": "minecraft:end_rod",
+      "count": 8,
+      "spread": 0.4
+    }
   ]
 }

@@ -1,0 +1,48 @@
+{
+  "id": "careerchronicle:cast_stomp",
+  "_comment": "阶段3-任务5 rev3 (基于《阶段3-骨骼旋转坐标系统参考文档》重新设计): setupAnim()渲染时机bug修复后, 实测pitch是vanilla骨骼(body/leg/arm)的唯一强可见轴, 60度已是大幅度动作, body pitch在60度会出现内层贴图外露的失真, 因此本版把所有vanilla骨骼pitch压到20-45度安全区间, 只有右腿抬起瞬间(用于制造'明显单腿动作'的核心叙事)保留到45度. 序列不变: tick0 neutral -> tick5 右腿抬起(大腿明显偏转+小腿随动微弯), 站立腿承重, 躯干轻微后仰配平 -> tick7 右腿快速下砸回地面(冲击, ease_out_expo), 双膝缓冲弯曲, 躯干仍只部分跟进 -> tick9 躯干延迟跟上达到自己的峰值(压到18度以内, 避免body pitch失真) -> tick12 沉降 -> tick17 归位. 左右腿四个关节值全程不同. 冲击帧对齐 ground_slam.json 的 delay_ticks=7.",
+  "duration_ticks": 17,
+  "loop": false,
+  "tracks": {
+    "right_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": -45, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": 8, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 12, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 17, "pitch": 0, "easing": "linear" }
+    ],
+    "right_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": 8, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": 20, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 12, "easing": "ease_in_out_sine" },
+      { "tick": 12, "pitch": 5, "easing": "ease_in_out_sine" },
+      { "tick": 17, "pitch": 0, "easing": "linear" }
+    ],
+    "left_leg": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": 4, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": 10, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 6, "easing": "ease_in_out_sine" },
+      { "tick": 12, "pitch": 2, "easing": "ease_in_out_sine" },
+      { "tick": 17, "pitch": 0, "easing": "linear" }
+    ],
+    "left_shin": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": 16, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": 26, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 18, "easing": "ease_in_out_sine" },
+      { "tick": 12, "pitch": 8, "easing": "ease_in_out_sine" },
+      { "tick": 17, "pitch": 0, "easing": "linear" }
+    ],
+    "body": [
+      { "tick": 0, "pitch": 0, "easing": "ease_in_out_sine" },
+      { "tick": 5, "pitch": -4, "easing": "ease_out_expo" },
+      { "tick": 7, "pitch": 8, "easing": "ease_out_expo" },
+      { "tick": 9, "pitch": 18, "easing": "ease_in_out_sine" },
+      { "tick": 12, "pitch": 10, "easing": "ease_in_out_sine" },
+      { "tick": 17, "pitch": 0, "easing": "linear" }
+    ]
+  }
+}
